@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="es"><head><script>
-if (!window.matchMedia('(display-mode: standalone)').matches) {
-  document.open();
-  document.write(\`
-    <div style="text-align: center; padding: 40px;">
-      <h2 style="color: red;">⚠️ Esta aplicación solo funciona desde la pantalla principal</h2>
-      <p>Por favor, instálala en tu dispositivo para continuar.</p>
-      <p>Ve al menú del navegador y selecciona <strong>"Agregar a pantalla de inicio"</strong>.</p>
-    </div>
-  \`);
-  document.close();
-}
-</script><link href="manifest.json" rel="manifest"/><meta content="#00796b" name="theme-color"/><script>
+<html lang="es"><head><link href="manifest.json" rel="manifest"/><meta content="#00796b" name="theme-color"/><script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js')
     .then(reg => console.log('SW registrado:', reg.scope))
@@ -315,7 +303,45 @@ body {
     color: #333;
     margin: 8px 0;
 }
-</style></head><body><div id="interfazPrincipal" style="display: block;"><!-- Vista principal --><div class="container" id="inicio">
+</style><script>
+document.addEventListener("DOMContentLoaded", function () {
+  const app = document.getElementById('interfazPrincipal');
+  const secundaria = document.getElementById('interfazSecundaria');
+  if (app) app.style.display = 'none';
+  if (secundaria) secundaria.style.display = 'none';
+
+  const esIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const esAndroid = /android/i.test(navigator.userAgent);
+
+  const mensaje = document.getElementById("mensajeInstruccion");
+  if (esIOS) {
+    mensaje.innerHTML = "<p>📱 En iPhone, toca el botón <strong>Compartir</strong> y elige <strong>'Agregar a pantalla de inicio'</strong>.</p>";
+  } else if (esAndroid) {
+    mensaje.innerHTML = "<p>📱 En Android, abre el menú del navegador y selecciona <strong>'Agregar a pantalla principal'</strong>.</p>";
+  } else {
+    mensaje.innerHTML = "<p>Esta aplicación solo funciona correctamente cuando es instalada en la pantalla de inicio.</p>";
+  }
+
+  verificarInstalacion(); // por si ya está instalada
+});
+
+function verificarInstalacion() {
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  if (isStandalone) {
+    document.getElementById('pantallaInicio').style.display = 'none';
+    const app = document.getElementById('interfazPrincipal');
+    const secundaria = document.getElementById('interfazSecundaria');
+    if (app) app.style.display = 'block';
+  }
+}
+</script></head><body>
+<div id="pantallaInicio" style="text-align:center;padding:40px;font-family:sans-serif;">
+<h2>🚀 ¡Bienvenido a la App Regional Pamplona!</h2>
+<p>Para usar esta aplicación correctamente, debes instalarla en la pantalla de inicio.</p>
+<div id="mensajeInstruccion" style="margin:20px 0;"></div>
+<button onclick="verificarInstalacion()" style="padding:10px 20px; font-size:16px; border-radius:8px; background-color:#00796b; color:white; border:none;">Ya la instalé</button>
+</div>
+<div id="interfazPrincipal" style="display: block;"><!-- Vista principal --><div class="container" id="inicio">
 <img alt="Logo de la página" class="logo" src="Logo.png"/>
 <h1>REGIONAL PAMPLONA</h1>
 <button class="btn" onclick="mostrarFormulario()">REPORTE DIARIO</button>
