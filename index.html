@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 
-<html lang="es"><head><link href="manifest.json" rel="manifest"/><meta content="#00796b" name="theme-color"/><script>
+<html lang="es"><head><script>
+if (!window.matchMedia('(display-mode: standalone)').matches) {
+  document.open();
+  document.write(\`
+    <div style="text-align: center; padding: 40px;">
+      <h2 style="color: red;">⚠️ Esta aplicación solo funciona desde la pantalla principal</h2>
+      <p>Por favor, instálala en tu dispositivo para continuar.</p>
+      <p>Ve al menú del navegador y selecciona <strong>"Agregar a pantalla de inicio"</strong>.</p>
+    </div>
+  \`);
+  document.close();
+}
+</script><link href="manifest.json" rel="manifest"/><meta content="#00796b" name="theme-color"/><script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js')
     .then(reg => console.log('SW registrado:', reg.scope))
@@ -303,18 +315,7 @@ body {
     color: #333;
     margin: 8px 0;
 }
-</style></head><body><script>
-if (!window.matchMedia('(display-mode: standalone)').matches) {
-  document.body.innerHTML = `
-    <div style="text-align: center; padding: 40px;">
-      <h2 style="color: red;">⚠️ Esta aplicación solo funciona desde la pantalla principal</h2>
-      <p>Por favor, instálala en tu dispositivo para continuar.</p>
-      <p>Ve al menú del navegador y selecciona <strong>"Agregar a pantalla de inicio"</strong>.</p>
-    </div>
-  `;
-  throw new Error("PWA no instalada");
-}
-</script><div id="interfazPrincipal" style="display: block;"><!-- Vista principal --><div class="container" id="inicio">
+</style></head><body><div id="interfazPrincipal" style="display: block;"><!-- Vista principal --><div class="container" id="inicio">
 <img alt="Logo de la página" class="logo" src="Logo.png"/>
 <h1>REGIONAL PAMPLONA</h1>
 <button class="btn" onclick="mostrarFormulario()">REPORTE DIARIO</button>
