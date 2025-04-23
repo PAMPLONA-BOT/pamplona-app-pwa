@@ -335,6 +335,14 @@ function verificarInstalacion() {
   }
 }
 </script></head><body>
+<div id="loginContainer" style="text-align:center;padding:40px;font-family:sans-serif;">
+<h2>🔐 Acceso a la App Regional Pamplona</h2>
+<p>Ingrese su clave para continuar:</p>
+<input id="claveUsuario" placeholder="Clave de acceso" style="padding:10px; font-size:16px; border-radius:6px; border:1px solid #ccc; width:80%; max-width:300px;" type="password"/>
+<br/><br/>
+<button onclick="verificarClave()" style="padding:10px 20px; font-size:16px; border-radius:8px; background-color:#00796b; color:white; border:none;">Ingresar</button>
+<p id="mensajeLogin" style="color:red; margin-top:20px;"></p>
+</div>
 <div id="pantallaInicio" style="text-align:center;padding:40px;font-family:sans-serif;">
 <h2>🚀 ¡Bienvenido a la App Regional Pamplona!</h2>
 <p>Para usar esta aplicación correctamente, debes instalarla en la pantalla de inicio.</p>
@@ -604,108 +612,7 @@ function actualizarApp() {
             throw new Error("Aplicación fuera de fecha");
         }
     })();
-</script><script>
-        const dataUsuarios =[["348","241 SECCION 635 CONS 0195 ESTADO ACTUAL Retirado","6737087-KRI-A3 TRAFO 9T99999","CARACOL","NOA CER O ORIENTE - PAMPLONA - - Pamplona","5712035 - -","#N/D","6737087"],["200058","276 SECCION 074 CONS 7190 ESTADO ACTUAL Activo","6558271-KRI-A3 TRAFO 2T00109","OLGA GRACIELA BUITRAGO","CLL 4 6-30 APT 402 - BARIO EL CENTRO - Pamplona","- 3223570554 - 3186057850","https://www.google.com/maps?q=7.377136,-72.64681","6558271"],
-["1120742","98 SECCION 995 CONS 0078 ESTADO ACTUAL No matriculado","No Instalado TRAFO","VICTOR RAUL CARILLO LOZANO","FINCA EL MILAGRO - VDA ICOTA - Cácota","3212834751 - - 3212834751","#N/D",""],["1120763","98 SECCION 995 CONS 0079 ESTADO ACTUAL No matriculado","No Instalado TRAFO","LUIS ARMANDO FLOREZ","KDX 7 - Pamplona","3212834751 - - 3212834751","#N/D",""],["1120776","98 SECCION 995 CONS 0080 ESTADO ACTUAL No matriculado","No Instalado TRAFO","JAIRO ALBERTO CAÑAS GARCIA","VDA CHINAVEGA - Cácota","3212834751 - - 3212834751","#N/D",""]];
-
-        const dataLectura = [
-  [
-    "205533",
-    "LECTOR HOBER ALEJANDRO DAVILA VARGAS EL DIA 23/01/2025 ACTIVA 48315 OBS_TEXTO enrrutar en la ruta 290-009\n REACTIVA 16065 OBS_TEXTO enrrutar en la ruta 290-009",
-    "LECTOR HOBER ALEJANDRO DAVILA VARGAS EL DIA 22/02/2025 ACTIVA 48480 \n REACTIVA 16074",
-    "LECTOR HOBER ALEJANDRO DAVILA VARGAS EL DIA 22/03/2025 ACTIVA 48682 \n REACTIVA 16085",
-    "51002955"
-  ],
-  [
-    "1051168",
-    "LECTOR HOBER ALEJANDRO DAVILA VARGAS EL DIA 23/01/2025 ACTIVA 9312 OBS_TEXTO enrrutar en la ruta 290-009\n REACTIVA 2392 OBS_TEXTO enrrutar en la ruta 290-009\n ACTIVA GENERADA 8 OBS_TEXTO enrrutar en la ruta 290-009\n REACTIVA GENERADA 3236 CAUSA Registro descentrado OBS_TEXTO enrrutar en la ruta 290-009",
-    "LECTOR HOBER ALEJANDRO DAVILA VARGAS EL DIA 22/02/2025 ACTIVA 9477 \n REACTIVA 2428 \n ACTIVA GENERADA 9 CAUSA Registro descentrado\n REACTIVA GENERADA 3293 CAUSA Registro descentrado",
-    "LECTOR HOBER ALEJANDRO DAVILA VARGAS EL DIA 22/03/2025 ACTIVA 9679 \n REACTIVA 2483 \n ACTIVA GENERADA 9 \n REACTIVA GENERADA 3356 CAUSA Registro descentrado",
-    "84059323"
-  ]
-];
-
-        function buscarDatos() {
-            const numero = document.getElementById("numeroUsuario").value.trim();
-            let html = "";
-
-            document.getElementById("numeroConsultado").innerHTML = `<strong>CLIENTE CONSULTADO:</strong> ${numero}`;
-
-            const usuario = dataUsuarios.find(row => row[0] === numero);
-            const lectura = dataLectura.find(row => row[0] === numero);
-
-            if (usuario) {
-                html += `<div class="card">
-                    <h3>Información del Usuario</h3>
-                    <p><strong>Ciclo:</strong> ${usuario[1]}</p>
-                    <p><strong>Medidor:</strong> ${usuario[2]}</p>
-                    <p><strong>Nombre:</strong> ${usuario[3]}</p>
-                    <p><strong>Dirección:</strong> ${usuario[4]}</p>
-                    <p><strong>Teléfono:</strong> ${usuario[5]}</p>
-                    <p><strong>GPS:</strong> <a href="${usuario[6]}" target="_blank">Ver en mapa</a></p>
-                </div>`;
-            }
-
-            if (lectura) {
-                html += `<div class="card">
-                    <h3>Lecturas</h3>
-                    <p><strong>Dato 1:</strong> ${lectura[1]}</p>
-                    <p><strong>Dato 2:</strong> ${lectura[2]}</p>
-                    <p><strong>Dato 3:</strong> ${lectura[3]}</p>
-                </div>`;
-            }
-
-            if (!usuario && !lectura) {
-                html = `<div class="card"><p>No se encontró información para el número ingresado.</p></div>`;
-            }
-
-            document.getElementById("resultados").innerHTML = html;
-        }
-
-        function buscarDatosConLlave() {
-            const llave = document.getElementById("numeroUsuario").value.trim();
-            let html = "";
-
-            document.getElementById("numeroConsultado").innerHTML = `<strong>LLAVE CONSULTADA:</strong> ${llave}`;
-
-            const usuario = dataUsuarios.find(row => row[7] === llave);
-            const lectura = dataLectura.find(row => row[4] === llave);
-
-            if (usuario) {
-                html += `<p><strong>Cliente:</strong> ${usuario[0]}</p>`;
-                html += `<div class="card">
-                    <h3>Información del Usuario</h3>
-                    <p><strong>Ciclo:</strong> ${usuario[1]}</p>
-                    <p><strong>Medidor:</strong> ${usuario[2]}</p>
-                    <p><strong>Nombre:</strong> ${usuario[3]}</p>
-                    <p><strong>Dirección:</strong> ${usuario[4]}</p>
-                    <p><strong>Teléfono:</strong> ${usuario[5]}</p>
-                    <p><strong>GPS:</strong> <a href="${usuario[6]}" target="_blank">Ver en mapa</a></p>
-                </div>`;
-            }
-
-            if (lectura) {
-                html += `<div class="card">
-                    <h3>Lecturas</h3>
-                    <p><strong>Dato 1:</strong> ${lectura[1]}</p>
-                    <p><strong>Dato 2:</strong> ${lectura[2]}</p>
-                    <p><strong>Dato 3:</strong> ${lectura[3]}</p>
-                </div>`;
-            }
-
-            if (!usuario && !lectura) {
-                html = `<div class="card"><p>No se encontró información para la llave ingresada.</p></div>`;
-            }
-
-            document.getElementById("resultados").innerHTML = html;
-        }
-
-        function limpiarConsulta() {
-            document.getElementById("numeroUsuario").value = "";
-            document.getElementById("resultados").innerHTML = "";
-            document.getElementById("numeroConsultado").innerHTML = "";
-        }
-    </script></div></div><script>
+</script></div></div><script>
 function mostrarInterfazSecundaria() {
     document.getElementById('interfazPrincipal').style.display = 'none';
     document.getElementById('interfazSecundaria').style.display = 'block';
@@ -714,5 +621,83 @@ function mostrarInterfazPrincipal() {
     document.getElementById('interfazSecundaria').style.display = 'none';
     document.getElementById('interfazPrincipal').style.display = 'block';
 }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mesActual = new Date().getMonth() + 1;
+  const anioActual = new Date().getFullYear();
+  const claveGuardada = localStorage.getItem("acceso_autorizado");
+
+  if (claveGuardada === mesActual + "-" + anioActual) {
+    iniciarFlujoApp();
+  } else {
+    document.getElementById("pantallaInicio").style.display = "none";
+    document.getElementById("interfazPrincipal").style.display = "none";
+    document.getElementById("interfazSecundaria").style.display = "none";
+  }
+});
+
+function verificarClave() {
+  const clave = document.getElementById("claveUsuario").value.trim();
+  if (!clave) {
+    document.getElementById("mensajeLogin").textContent = "Ingrese una clave.";
+    return;
+  }
+
+  fetch(`https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec?clave=${clave}`)
+    .then(res => res.text())
+    .then(respuesta => {
+      if (respuesta.trim() === "OK") {
+        const mesActual = new Date().getMonth() + 1;
+        const anioActual = new Date().getFullYear();
+        localStorage.setItem("acceso_autorizado", mesActual + "-" + anioActual);
+        iniciarFlujoApp();
+      } else {
+        document.getElementById("mensajeLogin").textContent = "Clave incorrecta.";
+      }
+    })
+    .catch(() => {
+      document.getElementById("mensajeLogin").textContent = "Error al validar. Verifique su conexión.";
+    });
+}
+
+function iniciarFlujoApp() {
+  document.getElementById("loginContainer").style.display = "none";
+
+  const esIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const esAndroid = /android/i.test(navigator.userAgent);
+
+  const mensaje = document.getElementById("mensajeInstruccion");
+  if (esIOS) {
+    mensaje.innerHTML = "<p>📱 En iPhone, toca el botón <strong>Compartir</strong> y elige <strong>'Agregar a pantalla de inicio'</strong>.</p>";
+  } else if (esAndroid) {
+    mensaje.innerHTML = "<p>📱 En Android, abre el menú del navegador y selecciona <strong>'Agregar a pantalla principal'</strong>.</p>";
+  } else {
+    mensaje.innerHTML = "<p>Esta aplicación solo funciona correctamente cuando es instalada en la pantalla de inicio.</p>";
+  }
+
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  if (isStandalone) {
+    document.getElementById("pantallaInicio").style.display = "none";
+    document.getElementById("interfazPrincipal").style.display = "block";
+  } else {
+    document.getElementById("pantallaInicio").style.display = "block";
+  }
+}
+</script>
+
+<script>
+let dataUsuarios = [];
+let dataLectura = [];
+
+fetch("usuarios.json")
+  .then(res => res.json())
+  .then(data => dataUsuarios = data)
+  .catch(err => console.error("Error cargando usuarios.json", err));
+
+fetch("lecturas.json")
+  .then(res => res.json())
+  .then(data => dataLectura = data)
+  .catch(err => console.error("Error cargando lecturas.json", err));
 </script>
 </body></html>
