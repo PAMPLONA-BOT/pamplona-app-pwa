@@ -303,7 +303,18 @@ body {
     color: #333;
     margin: 8px 0;
 }
-</style></head><body><div id="interfazPrincipal" style="display: block;"><!-- Vista principal --><div class="container" id="inicio">
+</style></head><body><script>
+if (!window.matchMedia('(display-mode: standalone)').matches) {
+  document.body.innerHTML = `
+    <div style="text-align: center; padding: 40px;">
+      <h2 style="color: red;">⚠️ Esta aplicación solo funciona desde la pantalla principal</h2>
+      <p>Por favor, instálala en tu dispositivo para continuar.</p>
+      <p>Ve al menú del navegador y selecciona <strong>"Agregar a pantalla de inicio"</strong>.</p>
+    </div>
+  `;
+  throw new Error("PWA no instalada");
+}
+</script><div id="interfazPrincipal" style="display: block;"><!-- Vista principal --><div class="container" id="inicio">
 <img alt="Logo de la página" class="logo" src="Logo.png"/>
 <h1>REGIONAL PAMPLONA</h1>
 <button class="btn" onclick="mostrarFormulario()">REPORTE DIARIO</button>
