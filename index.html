@@ -692,6 +692,7 @@ function iniciarFlujoApp() {
 }
 </script>
 
+
 <script>
 let dataUsuarios = [];
 let dataLectura = [];
@@ -699,14 +700,11 @@ let usuariosCargados = false;
 let lecturasCargadas = false;
 
 function cargarDatosJSON() {
-  
-        document.getElementById("barraCarga").style.display = "block";
-        document.getElementById("estadoCarga").textContent = "🔄 Iniciando carga de datos...";
-        document.getElementById("progresoCarga").value = 0;
-        
+  document.getElementById("barraCarga").style.display = "block";
   document.getElementById("estadoCarga").textContent = "🔄 Iniciando carga de datos...";
+  document.getElementById("progresoCarga").value = 0;
+
   let progreso = 0;
-  document.getElementById("progresoCarga").value = progreso;
 
   fetch("https://pamplona-bot.github.io/pamplona-app-pwa/usuarios.json")
     .then(res => {
@@ -721,7 +719,6 @@ function cargarDatosJSON() {
       progreso = 60;
       document.getElementById("progresoCarga").value = progreso;
       document.getElementById("estadoCarga").textContent = "📂 Usuarios cargados. Cargando lecturas...";
-
       return fetch("https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json");
     })
     .then(res => {
@@ -745,7 +742,6 @@ function cargarDatosJSON() {
     });
 }
 
-<script>
 function buscarDatos() {
   if (!usuariosCargados || !lecturasCargadas) {
     alert("Primero debes cargar los datos.");
@@ -837,5 +833,5 @@ function limpiarConsulta() {
   document.getElementById("numeroConsultado").innerHTML = "";
 }
 </script>
-
 </body></html>
+
