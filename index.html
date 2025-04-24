@@ -691,46 +691,7 @@ function iniciarFlujoApp() {
   }
 }
 </script>
-<script>
-let dataUsuarios = [];
-let dataLectura = [];
-let usuariosCargados = false;
-let lecturasCargadas = false;
 
-fetch("https://pamplona-bot.github.io/pamplona-app-pwa/usuarios.json")
-  .then(res => res.json())
-  .then(data => {
-    dataUsuarios = data;
-    usuariosCargados = true;
-  });
-
-fetch("https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json")
-  .then(res => res.json())
-  .then(data => {
-    dataLectura = data;
-    lecturasCargadas = true;
-  });
-
-function buscarDatos() {
-  if (!usuariosCargados) {
-    alert("Los datos de usuarios aún se están cargando. Por favor espera.");
-    return;
-  }
-
-  // Aquí debería ir la lógica original de búsqueda por cliente o medidor
-  console.log("Buscar usando dataUsuarios", dataUsuarios);
-}
-
-function buscarDatosConLlave() {
-  if (!lecturasCargadas) {
-    alert("Los datos de lecturas aún se están cargando. Por favor espera.");
-    return;
-  }
-
-  // Aquí debería ir la lógica original de búsqueda por lectura
-  console.log("Buscar usando dataLectura", dataLectura);
-}
-</script>
 <script>
 let dataUsuarios = [];
 let dataLectura = [];
