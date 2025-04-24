@@ -738,7 +738,11 @@ let usuariosCargados = false;
 let lecturasCargadas = false;
 
 function cargarDatosJSON() {
-  document.getElementById("barraCarga").style.display = "block";
+  
+        document.getElementById("barraCarga").style.display = "block";
+        document.getElementById("estadoCarga").textContent = "🔄 Iniciando carga de datos...";
+        document.getElementById("progresoCarga").value = 0;
+        
   document.getElementById("estadoCarga").textContent = "🔄 Iniciando carga de datos...";
   let progreso = 0;
   document.getElementById("progresoCarga").value = progreso;
@@ -786,7 +790,7 @@ function buscarDatos() {
     return;
   }
 
-  const entrada = document.getElementById("busqueda").value.trim();
+  const entrada = document.getElementById("numeroUsuario").value.trim();
   const contenedor = document.getElementById("resultados");
   contenedor.innerHTML = "";
 
@@ -812,7 +816,7 @@ function buscarDatosConLlave() {
     return;
   }
 
-  const entrada = document.getElementById("busqueda").value.trim();
+  const entrada = document.getElementById("numeroUsuario").value.trim();
   const contenedor = document.getElementById("resultados");
   contenedor.innerHTML = "";
 
@@ -834,7 +838,7 @@ function buscarDatosConLlave() {
 }
 
 function limpiarConsulta() {
-  document.getElementById("busqueda").value = "";
+  document.getElementById("numeroUsuario").value = "";
   document.getElementById("resultados").innerHTML = "";
 }
 </script>
