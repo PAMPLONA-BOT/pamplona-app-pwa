@@ -597,9 +597,9 @@ function actualizarApp() {
 </div>
 <div style="max-width: 800px; margin: auto; padding: 20px; text-align: center;"><header>Consulta de Datos</header><form>
 <input id="numeroUsuario" placeholder="Ingrese número de usuario o llave" type="tel"/>
-<button class="button green" onclick="buscarDatos()" type="button">Cliente</button>
-<button class="button blue" onclick="buscarDatosConLlave()" type="button">Medidor</button>
-</form><div class="numero-consultado" id="numeroConsultado"></div><div id="resultados"></div><button class="btn-clear button" onclick="limpiarConsulta()">Limpiar Consulta</button><script>
+<button class="button green" onclick="buscarDatos()" style="display:none;" type="button">Cliente</button>
+<button class="button blue" onclick="buscarDatosConLlave()" style="display:none;" type="button">Medidor</button>
+</form><div class="numero-consultado" id="numeroConsultado"></div><div id="resultados"></div><button class="btn-clear button" onclick="limpiarConsulta()" style="display:none;">Limpiar Consulta</button><script>
     // Validación de mes y año
     (function () {
         const fecha = new Date();
@@ -697,14 +697,14 @@ let dataLectura = [];
 let usuariosCargados = false;
 let lecturasCargadas = false;
 
-fetch("usuarios.json")
+fetch("https://pamplona-bot.github.io/pamplona-app-pwa/usuarios.json")
   .then(res => res.json())
   .then(data => {
     dataUsuarios = data;
     usuariosCargados = true;
   });
 
-fetch("lecturas.json")
+fetch("https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json")
   .then(res => res.json())
   .then(data => {
     dataLectura = data;
@@ -731,7 +731,6 @@ function buscarDatosConLlave() {
   console.log("Buscar usando dataLectura", dataLectura);
 }
 </script>
-
 <script>
 let dataUsuarios = [];
 let dataLectura = [];
@@ -740,88 +739,97 @@ let lecturasCargadas = false;
 
 function cargarDatosJSON() {
   document.getElementById("barraCarga").style.display = "block";
-  document.getElementById("estadoCarga").textContent = "Cargando usuarios.json...";
-
+  document.getElementById("estadoCarga").textContent = "🔄 Iniciando carga de datos...";
   let progreso = 0;
   document.getElementById("progresoCarga").value = progreso;
 
-  fetch("usuarios.json")
+  fetch("https://pamplona-bot.github.io/pamplona-app-pwa/usuarios.json")
     .then(res => {
       progreso = 30;
       document.getElementById("progresoCarga").value = progreso;
+      document.getElementById("estadoCarga").textContent = "📂 Cargando usuarios...";
       return res.json();
     })
     .then(data => {
       dataUsuarios = data;
       usuariosCargados = true;
-      document.getElementById("estadoCarga").textContent = "Usuarios cargados. Cargando lecturas.json...";
       progreso = 60;
       document.getElementById("progresoCarga").value = progreso;
+      document.getElementById("estadoCarga").textContent = "📂 Usuarios cargados. Cargando lecturas...";
 
-      return fetch("lecturas.json");
+      return fetch("https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json");
     })
-    .then(res => res.json())
+    .then(res => {
+      progreso = 80;
+      document.getElementById("progresoCarga").value = progreso;
+      return res.json();
+    })
     .then(data => {
       dataLectura = data;
       lecturasCargadas = true;
       progreso = 100;
       document.getElementById("progresoCarga").value = progreso;
-      document.getElementById("estadoCarga").textContent = "✅ Datos cargados correctamente.";
+      document.getElementById("estadoCarga").textContent = "✅ ¡Datos cargados correctamente!";
+      document.querySelector('button[onclick="buscarDatos()"]').style.display = "inline-block";
+      document.querySelector('button[onclick="buscarDatosConLlave()"]').style.display = "inline-block";
+      document.querySelector('button[onclick="limpiarConsulta()"]').style.display = "inline-block";
     })
     .catch(err => {
       console.error("Error al cargar los archivos JSON", err);
-      document.getElementById("estadoCarga").textContent = "❌ Error al cargar datos.";
+      document.getElementById("estadoCarga").textContent = "❌ Error al cargar datos. Revisa el nombre o la conexión.";
     });
 }
 
 function buscarDatos() {
   if (!usuariosCargados) {
-    alert("Debes cargar los datos antes de realizar una búsqueda.");
+    alert("Primero debes cargar los datos.");
     return;
   }
 
   const entrada = document.getElementById("busqueda").value.trim();
-  if (!entrada) return;
-
-  const resultado = dataUsuarios.find(u => u[0] === entrada);
   const contenedor = document.getElementById("resultados");
   contenedor.innerHTML = "";
 
+  if (!entrada) return;
+
+  const resultado = dataUsuarios.find(u => u[0] === entrada);
   if (resultado) {
-    const tarjeta = `<div style="padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;">
-      <p><strong>Cliente:</strong> ${resultado[0]}</p>
-      <p><strong>Dirección:</strong> ${resultado[1]}</p>
-      <p><strong>Medidor:</strong> ${resultado[7]}</p>
-    </div>`;
-    contenedor.innerHTML = tarjeta;
+    contenedor.innerHTML = `
+      <div style="padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;">
+        <p><strong>Cliente:</strong> ${resultado[0]}</p>
+        <p><strong>Dirección:</strong> ${resultado[1]}</p>
+        <p><strong>Medidor:</strong> ${resultado[7]}</p>
+      </div>
+    `;
   } else {
-    contenedor.innerHTML = "<p style='color:red;'>No se encontraron datos para este cliente.</p>";
+    contenedor.innerHTML = "<p style='color:red;'>❌ No se encontraron datos para este cliente.</p>";
   }
 }
 
 function buscarDatosConLlave() {
   if (!lecturasCargadas) {
-    alert("Debes cargar los datos antes de realizar una búsqueda.");
+    alert("Primero debes cargar los datos.");
     return;
   }
 
   const entrada = document.getElementById("busqueda").value.trim();
-  if (!entrada) return;
-
-  const resultado = dataLectura.find(l => l[0] === entrada);
   const contenedor = document.getElementById("resultados");
   contenedor.innerHTML = "";
 
+  if (!entrada) return;
+
+  const resultado = dataLectura.find(l => l[0] === entrada);
   if (resultado) {
-    const tarjeta = `<div style="padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;">
-      <p><strong>Medidor:</strong> ${resultado[0]}</p>
-      <p><strong>Enero:</strong> ${resultado[1]}</p>
-      <p><strong>Febrero:</strong> ${resultado[2]}</p>
-      <p><strong>Marzo:</strong> ${resultado[3]}</p>
-    </div>`;
-    contenedor.innerHTML = tarjeta;
+    contenedor.innerHTML = `
+      <div style="padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;">
+        <p><strong>Medidor:</strong> ${resultado[0]}</p>
+        <p><strong>Enero:</strong> ${resultado[1]}</p>
+        <p><strong>Febrero:</strong> ${resultado[2]}</p>
+        <p><strong>Marzo:</strong> ${resultado[3]}</p>
+      </div>
+    `;
   } else {
-    contenedor.innerHTML = "<p style='color:red;'>No se encontraron lecturas para este medidor.</p>";
+    contenedor.innerHTML = "<p style='color:red;'>❌ No se encontraron lecturas para este medidor.</p>";
   }
 }
 
