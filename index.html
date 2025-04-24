@@ -589,7 +589,13 @@ function actualizarApp() {
 </script></div><div id="interfazSecundaria" style="display: none;"><button onclick="mostrarInterfazPrincipal()" style="
     margin: 20px auto; display: block; background-color: tomato; color: white;
     padding: 10px 20px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;
-">⬅ Volver al Inicio</button><div style="max-width: 800px; margin: auto; padding: 20px; text-align: center;"><header>Consulta de Datos</header><form>
+">⬅ Volver al Inicio</button>
+<button onclick="cargarDatosJSON()" style="margin-left:10px; padding:10px 15px; border-radius:8px; background:#0a7d5f; color:white; border:none;">📂 Cargar Datos</button>
+<div id="barraCarga" style="margin-top:10px; display:none;">
+<progress id="progresoCarga" max="100" style="width:80%; height:20px;" value="0"></progress>
+<p id="estadoCarga" style="font-size:14px;"></p>
+</div>
+<div style="max-width: 800px; margin: auto; padding: 20px; text-align: center;"><header>Consulta de Datos</header><form>
 <input id="numeroUsuario" placeholder="Ingrese número de usuario o llave" type="tel"/>
 <button class="button green" onclick="buscarDatos()" type="button">Cliente</button>
 <button class="button blue" onclick="buscarDatosConLlave()" type="button">Medidor</button>
@@ -685,8 +691,6 @@ function iniciarFlujoApp() {
   }
 }
 </script>
-
-
 <script>
 let dataUsuarios = [];
 let dataLectura = [];
@@ -725,6 +729,105 @@ function buscarDatosConLlave() {
 
   // Aquí debería ir la lógica original de búsqueda por lectura
   console.log("Buscar usando dataLectura", dataLectura);
+}
+</script>
+
+<script>
+let dataUsuarios = [];
+let dataLectura = [];
+let usuariosCargados = false;
+let lecturasCargadas = false;
+
+function cargarDatosJSON() {
+  document.getElementById("barraCarga").style.display = "block";
+  document.getElementById("estadoCarga").textContent = "Cargando usuarios.json...";
+
+  let progreso = 0;
+  document.getElementById("progresoCarga").value = progreso;
+
+  fetch("usuarios.json")
+    .then(res => {
+      progreso = 30;
+      document.getElementById("progresoCarga").value = progreso;
+      return res.json();
+    })
+    .then(data => {
+      dataUsuarios = data;
+      usuariosCargados = true;
+      document.getElementById("estadoCarga").textContent = "Usuarios cargados. Cargando lecturas.json...";
+      progreso = 60;
+      document.getElementById("progresoCarga").value = progreso;
+
+      return fetch("lecturas.json");
+    })
+    .then(res => res.json())
+    .then(data => {
+      dataLectura = data;
+      lecturasCargadas = true;
+      progreso = 100;
+      document.getElementById("progresoCarga").value = progreso;
+      document.getElementById("estadoCarga").textContent = "✅ Datos cargados correctamente.";
+    })
+    .catch(err => {
+      console.error("Error al cargar los archivos JSON", err);
+      document.getElementById("estadoCarga").textContent = "❌ Error al cargar datos.";
+    });
+}
+
+function buscarDatos() {
+  if (!usuariosCargados) {
+    alert("Debes cargar los datos antes de realizar una búsqueda.");
+    return;
+  }
+
+  const entrada = document.getElementById("busqueda").value.trim();
+  if (!entrada) return;
+
+  const resultado = dataUsuarios.find(u => u[0] === entrada);
+  const contenedor = document.getElementById("resultados");
+  contenedor.innerHTML = "";
+
+  if (resultado) {
+    const tarjeta = `<div style="padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;">
+      <p><strong>Cliente:</strong> ${resultado[0]}</p>
+      <p><strong>Dirección:</strong> ${resultado[1]}</p>
+      <p><strong>Medidor:</strong> ${resultado[7]}</p>
+    </div>`;
+    contenedor.innerHTML = tarjeta;
+  } else {
+    contenedor.innerHTML = "<p style='color:red;'>No se encontraron datos para este cliente.</p>";
+  }
+}
+
+function buscarDatosConLlave() {
+  if (!lecturasCargadas) {
+    alert("Debes cargar los datos antes de realizar una búsqueda.");
+    return;
+  }
+
+  const entrada = document.getElementById("busqueda").value.trim();
+  if (!entrada) return;
+
+  const resultado = dataLectura.find(l => l[0] === entrada);
+  const contenedor = document.getElementById("resultados");
+  contenedor.innerHTML = "";
+
+  if (resultado) {
+    const tarjeta = `<div style="padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;">
+      <p><strong>Medidor:</strong> ${resultado[0]}</p>
+      <p><strong>Enero:</strong> ${resultado[1]}</p>
+      <p><strong>Febrero:</strong> ${resultado[2]}</p>
+      <p><strong>Marzo:</strong> ${resultado[3]}</p>
+    </div>`;
+    contenedor.innerHTML = tarjeta;
+  } else {
+    contenedor.innerHTML = "<p style='color:red;'>No se encontraron lecturas para este medidor.</p>";
+  }
+}
+
+function limpiarConsulta() {
+  document.getElementById("busqueda").value = "";
+  document.getElementById("resultados").innerHTML = "";
 }
 </script>
 </body></html>
