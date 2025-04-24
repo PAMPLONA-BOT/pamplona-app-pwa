@@ -745,30 +745,47 @@ function cargarDatosJSON() {
     });
 }
 
+<script>
 function buscarDatos() {
   if (!usuariosCargados) {
     alert("Primero debes cargar los datos.");
     return;
   }
 
-  const entrada = document.getElementById("numeroUsuario").value.trim();
-  const contenedor = document.getElementById("resultados");
-  contenedor.innerHTML = "";
+  const numero = document.getElementById("numeroUsuario").value.trim();
+  let html = "";
 
-  if (!entrada) return;
+  document.getElementById("numeroConsultado").innerHTML = `<strong>CLIENTE CONSULTADO:</strong> ${numero}`;
 
-  const resultado = dataUsuarios.find(u => u[0] === entrada);
-  if (resultado) {
-    contenedor.innerHTML = `
-      <div style="padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;">
-        <p><strong>Cliente:</strong> ${resultado[0]}</p>
-        <p><strong>Dirección:</strong> ${resultado[1]}</p>
-        <p><strong>Medidor:</strong> ${resultado[7]}</p>
-      </div>
-    `;
-  } else {
-    contenedor.innerHTML = "<p style='color:red;'>❌ No se encontraron datos para este cliente.</p>";
+  const usuario = dataUsuarios.find(row => row[0] === numero);
+  const lectura = dataLectura.find(row => row[0] === numero);
+
+  if (usuario) {
+    html += `<div class="card">
+      <h3>Información del Usuario</h3>
+      <p><strong>Ciclo:</strong> ${usuario[1]}</p>
+      <p><strong>Medidor:</strong> ${usuario[2]}</p>
+      <p><strong>Nombre:</strong> ${usuario[3]}</p>
+      <p><strong>Dirección:</strong> ${usuario[4]}</p>
+      <p><strong>Teléfono:</strong> ${usuario[5]}</p>
+      <p><strong>GPS:</strong> <a href="${usuario[6]}" target="_blank">Ver en mapa</a></p>
+    </div>`;
   }
+
+  if (lectura) {
+    html += `<div class="card">
+      <h3>Lecturas</h3>
+      <p><strong>Dato 1:</strong> ${lectura[1]}</p>
+      <p><strong>Dato 2:</strong> ${lectura[2]}</p>
+      <p><strong>Dato 3:</strong> ${lectura[3]}</p>
+    </div>`;
+  }
+
+  if (!usuario && !lectura) {
+    html = `<div class="card"><p>No se encontró información para el número ingresado.</p></div>`;
+  }
+
+  document.getElementById("resultados").innerHTML = html;
 }
 
 function buscarDatosConLlave() {
@@ -777,30 +794,48 @@ function buscarDatosConLlave() {
     return;
   }
 
-  const entrada = document.getElementById("numeroUsuario").value.trim();
-  const contenedor = document.getElementById("resultados");
-  contenedor.innerHTML = "";
+  const llave = document.getElementById("numeroUsuario").value.trim();
+  let html = "";
 
-  if (!entrada) return;
+  document.getElementById("numeroConsultado").innerHTML = `<strong>LLAVE CONSULTADA:</strong> ${llave}`;
 
-  const resultado = dataLectura.find(l => l[0] === entrada);
-  if (resultado) {
-    contenedor.innerHTML = `
-      <div style="padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;">
-        <p><strong>Medidor:</strong> ${resultado[0]}</p>
-        <p><strong>Enero:</strong> ${resultado[1]}</p>
-        <p><strong>Febrero:</strong> ${resultado[2]}</p>
-        <p><strong>Marzo:</strong> ${resultado[3]}</p>
-      </div>
-    `;
-  } else {
-    contenedor.innerHTML = "<p style='color:red;'>❌ No se encontraron lecturas para este medidor.</p>";
+  const usuario = dataUsuarios.find(row => row[7] === llave);
+  const lectura = dataLectura.find(row => row[4] === llave);
+
+  if (usuario) {
+    html += `<p><strong>Cliente:</strong> ${usuario[0]}</p>`;
+    html += `<div class="card">
+      <h3>Información del Usuario</h3>
+      <p><strong>Ciclo:</strong> ${usuario[1]}</p>
+      <p><strong>Medidor:</strong> ${usuario[2]}</p>
+      <p><strong>Nombre:</strong> ${usuario[3]}</p>
+      <p><strong>Dirección:</strong> ${usuario[4]}</p>
+      <p><strong>Teléfono:</strong> ${usuario[5]}</p>
+      <p><strong>GPS:</strong> <a href="${usuario[6]}" target="_blank">Ver en mapa</a></p>
+    </div>`;
   }
+
+  if (lectura) {
+    html += `<div class="card">
+      <h3>Lecturas</h3>
+      <p><strong>Dato 1:</strong> ${lectura[1]}</p>
+      <p><strong>Dato 2:</strong> ${lectura[2]}</p>
+      <p><strong>Dato 3:</strong> ${lectura[3]}</p>
+    </div>`;
+  }
+
+  if (!usuario && !lectura) {
+    html = `<div class="card"><p>No se encontró información para la llave ingresada.</p></div>`;
+  }
+
+  document.getElementById("resultados").innerHTML = html;
 }
 
 function limpiarConsulta() {
   document.getElementById("numeroUsuario").value = "";
   document.getElementById("resultados").innerHTML = "";
+  document.getElementById("numeroConsultado").innerHTML = "";
 }
 </script>
+
 </body></html>
