@@ -747,7 +747,7 @@ function cargarDatosJSON() {
 
 <script>
 function buscarDatos() {
-  if (!usuariosCargados) {
+  if (!usuariosCargados || !lecturasCargadas) {
     alert("Primero debes cargar los datos.");
     return;
   }
@@ -789,7 +789,7 @@ function buscarDatos() {
 }
 
 function buscarDatosConLlave() {
-  if (!lecturasCargadas) {
+  if (!usuariosCargados || !lecturasCargadas) {
     alert("Primero debes cargar los datos.");
     return;
   }
@@ -797,7 +797,7 @@ function buscarDatosConLlave() {
   const llave = document.getElementById("numeroUsuario").value.trim();
   let html = "";
 
-  document.getElementById("numeroConsultado").innerHTML = `<strong>LLAVE CONSULTADA:</strong> ${llave}`;
+  document.getElementById("numeroConsultado").innerHTML = `<strong>MEDIDOR CONSULTADO:</strong> ${llave}`;
 
   const usuario = dataUsuarios.find(row => row[7] === llave);
   const lectura = dataLectura.find(row => row[4] === llave);
@@ -825,7 +825,7 @@ function buscarDatosConLlave() {
   }
 
   if (!usuario && !lectura) {
-    html = `<div class="card"><p>No se encontró información para la llave ingresada.</p></div>`;
+    html = `<div class="card"><p>No se encontró información para el medidor ingresado.</p></div>`;
   }
 
   document.getElementById("resultados").innerHTML = html;
