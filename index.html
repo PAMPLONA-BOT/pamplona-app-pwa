@@ -728,16 +728,6 @@ function cargarDatosJSON() {
     })
     .then(data => {
       dataLectura = data;
-
-let dataRevisiones = [];
-// Carga también revisiones.json al presionar Cargar Datos
-fetch("https://pamplona-bot.github.io/pamplona-app-pwa/revisiones.json")
-  .then(res => res.json())
-  .then(data => {
-    dataRevisiones = data;
-    // actualizar barra de progreso si usas una
-  });
-
       lecturasCargadas = true;
       progreso = 100;
       document.getElementById("progresoCarga").value = progreso;
@@ -787,12 +777,6 @@ function buscarDatos() {
     </div>`;
   }
 
-  
-  const revision = dataRevisiones.find(row => row[0] === numero);
-  if (revision) {
-    html += `<div class="card"><h3>ACTIVIDADES SCR</h3><p>${revision[1]}</p></div>`;
-  }
-
   if (!usuario && !lectura) {
     html = `<div class="card"><p>No se encontró información para el número ingresado.</p></div>`;
   }
@@ -836,12 +820,6 @@ function buscarDatosConLlave() {
     </div>`;
   }
 
-  
-  const revision = dataRevisiones.find(row => row[0] === numero);
-  if (revision) {
-    html += `<div class="card"><h3>ACTIVIDADES SCR</h3><p>${revision[1]}</p></div>`;
-  }
-
   if (!usuario && !lectura) {
     html = `<div class="card"><p>No se encontró información para el medidor ingresado.</p></div>`;
   }
@@ -856,5 +834,4 @@ function limpiarConsulta() {
 }
 </script>
 </body></html>
-
 
