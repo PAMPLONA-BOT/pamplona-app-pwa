@@ -7,6 +7,7 @@ const urlsToCache = [
   './service-worker.js',
   './usuarios.json',
   './lecturas.json',
+  './revisiones.json',
   './icon-192.png',
   './icon-512.png'
 ];
