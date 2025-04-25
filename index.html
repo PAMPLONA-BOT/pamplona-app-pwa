@@ -696,8 +696,10 @@ function iniciarFlujoApp() {
 <script>
 let dataUsuarios = [];
 let dataLectura = [];
+let dataRevisiones = [];
 let usuariosCargados = false;
 let lecturasCargadas = false;
+let revisionesCargadas = false;
 
 function cargarDatosJSON() {
   document.getElementById("barraCarga").style.display = "block";
@@ -721,6 +723,12 @@ function cargarDatosJSON() {
       document.getElementById("estadoCarga").textContent = "📂 Usuarios cargados. Cargando lecturas...";
       return fetch("https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json");
     })
+     .then(data => {
+      dataLectura = data;
+      lecturasCargadas = true;
+      return fetch("https://pamplona-bot.github.io/pamplona-app-pwa/revisiones.json");
+    })
+
     .then(res => {
       progreso = 80;
       document.getElementById("progresoCarga").value = progreso;
@@ -743,7 +751,7 @@ function cargarDatosJSON() {
 }
 
 function buscarDatos() {
-  if (!usuariosCargados || !lecturasCargadas) {
+  if (!usuariosCargados || !lecturasCargadas || !revisionesCargadas) {
     alert("Primero debes cargar los datos.");
     return;
   }
@@ -755,6 +763,7 @@ function buscarDatos() {
 
   const usuario = dataUsuarios.find(row => row[0] === numero);
   const lectura = dataLectura.find(row => row[0] === numero);
+  const revision = dataRevisiones.find(row => row[0] === numero);
 
   if (usuario) {
     html += `<div class="card">
@@ -777,7 +786,14 @@ function buscarDatos() {
     </div>`;
   }
 
-  if (!usuario && !lectura) {
+  if (revision) {
+    html += `<div class="card">
+      <h3>ACTIVIDADES SCR</h3>
+      <p>${revision[1]}</p>
+    </div>`;
+  }
+
+  if (!usuario && !lectura && !revision) {
     html = `<div class="card"><p>No se encontró información para el número ingresado.</p></div>`;
   }
 
@@ -785,7 +801,7 @@ function buscarDatos() {
 }
 
 function buscarDatosConLlave() {
-  if (!usuariosCargados || !lecturasCargadas) {
+  if (!usuariosCargados || !lecturasCargadas || !revisionesCargadas) {
     alert("Primero debes cargar los datos.");
     return;
   }
@@ -797,6 +813,7 @@ function buscarDatosConLlave() {
 
   const usuario = dataUsuarios.find(row => row[7] === llave);
   const lectura = dataLectura.find(row => row[4] === llave);
+  const revision = dataRevisiones.find(row => row[0] === numero);
 
   if (usuario) {
     html += `<p><strong>Cliente:</strong> ${usuario[0]}</p>`;
@@ -819,8 +836,15 @@ function buscarDatosConLlave() {
       <p><strong>Dato 3:</strong> ${lectura[3]}</p>
     </div>`;
   }
+   
+  if (revision) {
+    html += `<div class="card">
+      <h3>ACTIVIDADES SCR</h3>
+      <p>${revision[1]}</p>
+    </div>`;
+  }
 
-  if (!usuario && !lectura) {
+  if (!usuario && !lectura && !revision) {
     html = `<div class="card"><p>No se encontró información para el medidor ingresado.</p></div>`;
   }
 
