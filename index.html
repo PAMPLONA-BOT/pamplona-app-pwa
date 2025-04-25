@@ -303,6 +303,21 @@ body {
     color: #333;
     margin: 8px 0;
 }
+
+<style>
+.card pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+  font-size: 15px;
+  color: #444;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+</style>
 </style><script>
 document.addEventListener("DOMContentLoaded", function () {
   const app = document.getElementById('interfazPrincipal');
@@ -796,7 +811,6 @@ function buscarDatos() {
   if (revision) {
     html += `<div class="card">
       <h3>Revisiones</h3>
-      <h3>Revisiones SCR</h3>
       <pre>${revision[1]}</pre>
     </div>`;
   }
