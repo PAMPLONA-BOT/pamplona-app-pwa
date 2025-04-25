@@ -723,26 +723,23 @@ function cargarDatosJSON() {
       document.getElementById("estadoCarga").textContent = "📂 Usuarios cargados. Cargando lecturas...";
       return fetch("https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json");
     })
-    .then(res => res.json())
-    .then(data => {
+     .then(data => {
       dataLectura = data;
       lecturasCargadas = true;
       progreso = 80;
       document.getElementById("progresoCarga").value = progreso;
-      document.getElementById("estadoCarga").textContent = "📂 Lecturas cargadas. Cargando revisiones...";
+      document.getElementById("estadoCarga").textContent = "📂 Usuarios cargados. Cargando lecturas...";
       return fetch("https://pamplona-bot.github.io/pamplona-app-pwa/revisiones.json");
     })
-    .then(res => res.json())
+
+    .then(res => {
+      progreso = 80;
+      document.getElementById("progresoCarga").value = progreso;
+      return res.json();
+    })
     .then(data => {
       dataRevisiones = data;
       revisionesCargadas = true;
-      progreso = 100;
-      document.getElementById("progresoCarga").value = progreso;
-      document.getElementById("estadoCarga").textContent = "✅ ¡Todos los datos cargados correctamente!";
-      document.querySelector('button[onclick="buscarDatos()"]').style.display = "inline-block";
-      document.querySelector('button[onclick="buscarDatosConLlave()"]').style.display = "inline-block";
-      document.querySelector('button[onclick="limpiarConsulta()"]').style.display = "inline-block";
-    });
       progreso = 100;
       document.getElementById("progresoCarga").value = progreso;
       document.getElementById("estadoCarga").textContent = "✅ ¡Datos cargados correctamente!";
