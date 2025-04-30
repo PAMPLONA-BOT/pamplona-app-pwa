@@ -968,12 +968,16 @@
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 39712\nFECHA: *27/01/2025*  HORA: *09:53*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita nadie atiende, se procede a suspender el servicio de energía desde medidor, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 39712\nFECHA: *27/01/2025*  HORA: *17:54*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se le reconecto el servicio de energía desde medidor, ver fotos"
   ],
   [
+    "117300",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 14042\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *16:14*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en fachada ca sin tornillo tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 14042\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *08:26*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca sin tornillo tb conforme se conecta de bornera se toma tensión casa con suministro"
+  ],
+  [
     "117309",
     "D_TIPO: Revisión Comercial Análisis Posterior\nLECTURA: 17023\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *19/04/2025*  HORA: *14:00*\nD_OBSERBACION: Anormalidad consumo justificado\nOBSERVACION: 101\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una frutería se hace prueba al vacío medidor conforme se observa que el tanque congelador es que le está consumiendo mas energía por lo cual se deduce la alta de consumo se le recomienda al usuario cambiarlo o desconectarlo"
   ],
   [
     "117377",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 65514\nFECHA: *24/01/2025*  HORA: *15:30*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se encontró con suministro regular se deja sin suministro regular se toca varias veces nadie atiende\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 65514\nFECHA: *25/01/2025*  HORA: *08:09*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca conforme tb conforme se conecta de bornera se toma tensión casa con suministro"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 65514\nFECHA: *24/01/2025*  HORA: *15:30*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se encontró con suministro regular se deja sin suministro regular se toca varias veces nadie atiende\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 65514\nFECHA: *25/01/2025*  HORA: *08:09*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca conforme tb conforme se conecta de bornera se toma tensión casa con suministro\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 65927\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:17*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se le reconecto el servicio de energía desde medidor, nadie atiende al momento de la visita, ver foto\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 65927\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *12:08*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en fachada ca conforme tb conforme se suspende de bornera poste en buen estado red trenzada"
   ],
   [
     "117385",
@@ -981,7 +985,11 @@
   ],
   [
     "117390",
-    "D_TIPO: Visita Persuasiva\nLECTURA: 55831\nFECHA: *26/02/2025*  HORA: *14:56*\nD_OBSERBACION: ATENDIDA HABILIT MEDIDOR\nOBSERVACION: 12\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE OBSERVA MEDIDOR EN FACHADA TAPADO CON UNA PUBLICIDAD SE INDAGO CIN USUARIO REALIZARA EL PAGO EL DIA 26/02/25. MEDIDOR BUEN ESTADO SIN IRREGULARIDADES VER FOTO"
+    "D_TIPO: Visita Persuasiva\nLECTURA: 55831\nFECHA: *26/02/2025*  HORA: *14:56*\nD_OBSERBACION: ATENDIDA HABILIT MEDIDOR\nOBSERVACION: 12\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE OBSERVA MEDIDOR EN FACHADA TAPADO CON UNA PUBLICIDAD SE INDAGO CIN USUARIO REALIZARA EL PAGO EL DIA 26/02/25. MEDIDOR BUEN ESTADO SIN IRREGULARIDADES VER FOTO\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 55951\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *11:41*\nD_OBSERBACION: USUARIO IMPIDE SUSPENSION\nOBSERVACION: 222\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: usuario no permite suspension manifiesta q siempre le dan tiempo q ya va a pagar q hay tiene la plata"
+  ],
+  [
+    "117398",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 23762\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *11:46*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en fachada ca sin tornillo tb conforme se suspende de bornera poste en buen estado red trenzada"
   ],
   [
     "117446",
@@ -1010,6 +1018,10 @@
   [
     "117516",
     "D_TIPO: Revisión Comercial General\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO SIN CONSUMO\nFECHA: *12/03/2025*  HORA: *11:29*\nD_OBSERBACION: Acción ejecutada\nOBSERVACION: 107\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO CON SERVICIO REGULAR SE OBSERVA MEDIDOR ADENTRO DEL ENREJADO DEL INMUEBLE SE INDAGO CON VECINOS ESTA VACÍA LA VIVIENDA SE TOMA REGISTRO FOTOGRÁFICO"
+  ],
+  [
+    "117527",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 52158\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *16:22*\nD_OBSERBACION: NO EJECUTADA FACTORES CLIMATICOS\nOBSERVACION: 231\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: c1 medidor en reja ala interperie  lluvia en el momento de la suspension le cae agua y la carretera está en lagunada y los carros salpican mucha agua"
   ],
   [
     "117537",
@@ -1060,6 +1072,10 @@
     "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 10922\nOBS_CONSUMO_T: VARIACIÓN NIVEL DE UTILIZACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *01/04/2025*  HORA: *17:07*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se encontró sin suministro regular se deja con suministro regular se observa medidor en fachada en buen estado\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 10922\nOBS_CONSUMO_T: VARIACIÓN NIVEL DE UTILIZACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *01/04/2025*  HORA: *10:48*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se encontró con suministro regular se deja sin suministro regular se observa medidor en fachada en buen estado"
   ],
   [
+    "117780",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 6545\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *16:07*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada en gabinete tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 6545\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *08:28*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se conecta de bornera se toma tensión loc con suministro"
+  ],
+  [
     "117784",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 88450\nFECHA: *03/03/2025*  HORA: *14:31*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local comercial supermercado con suministro de energía regular,se tocó la puerta nadie atiende,se suspendió de medidor,red trenzada conectores de penetración, usuario ausente,ver fotos\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 88450\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *01/04/2025*  HORA: *09:30*\nD_OBSERBACION: SE ENCONTRO SUSPENDIDO\nOBSERVACION: 247\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona un local cerrado se encontró sin suministro regular se deja sin suministro regular se observa medidor en fachada en buen estado"
   ],
@@ -1074,6 +1090,10 @@
   [
     "117870",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 11153\nFECHA: *27/01/2025*  HORA: *09:41*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía al momento de la visita usuario no presenta factura cancelada se procede a suspender el servicio de energía desde medidor, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 11156\nFECHA: *28/01/2025*  HORA: *16:38*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar con suministro de energía regular, se encontró reconectado,se revisa conexión y se ajustan tornillos de bornera, usuario ausente,ver fotos"
+  ],
+  [
+    "117877",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 26794\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *14:08*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca conforme tb conforme se suspende de taco usuario ausente"
   ],
   [
     "117884",
@@ -1168,6 +1188,14 @@
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 17124\nFECHA: *25/03/2025*  HORA: *09:34*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local comercial con suministro de energía regular,no se encontró a nadie encargado,se cincroniza la máquina y no se cancela la orden,se suspendió de medidor, medidor ubicado en gabinete,tapa bornera dañada, usuario ausente,ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 17124\nFECHA: *29/03/2025*  HORA: *14:21*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO SE RECONECTA SERVICIO SE VERIFICA CONEXIÓN MEDIDOR EN FACHADA NADIE ATIENDE MOMENTO DE LA REVISIÓN MEDIDOR BUEN ESTADO EN FACHADA SIN IRREGULARIDADES VER FOTO"
   ],
   [
+    "118395",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 49434\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *09:30*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en fachada ca antigua tb sin tornillo se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 49436\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:49*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona un restaurante en buen estado al cual se encontró con el servicio de energía reconectado desde medidor, tapa bornera de medidor sin tornillo, ver foto"
+  ],
+  [
+    "118418",
+    "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 29760\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:41*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se le reconecto el servicio de energía desde medidor, ver. foto\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 29760\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *09:57*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en fachada ca antigua tb conforme se suspende de bornera"
+  ],
+  [
     "118446",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 70392\nFECHA: *25/01/2025*  HORA: *12:38*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en columna ca sin tapa sin tb se suspende de bornera poste en buen estado red abierta\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 70392\nFECHA: *17/02/2025*  HORA: *17:17*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una cabaña familiar se encontró sin suministro regular se deja con suministro regular"
   ],
@@ -1178,6 +1206,10 @@
   [
     "118460",
     "D_TIPO: Revisión Comercial Análisis Posterior\nLECTURA: 74416\nFECHA: *17/01/2025*  HORA: *15:12*\nD_OBSERBACION: Anormalidad consumo justificado\nOBSERVACION: 101\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE TOMA CARGA TOTAL DE LA VIVIENDA 4.18A. SE REALIZA PRUEBA AL VACÍO MEDIDOR NO REGISTRA CONSUMO EN AUSENCIA DE CARGA. SE INDAGO CON USUARIO NO JUSTIFICA EL CONSUMO QUE SOLO HABITAN VIVIENDA TEMPORADA DE VACACIONES SE OBSERVA MEDIDOR BUEN ESTADO SIN TAPA BORNERA NO SE OBSERVA IRREGULARIDADES VER FOTO"
+  ],
+  [
+    "118467",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA:  \nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *29/04/2025*  HORA: *09:07*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: c2 medidor dentro de rejas con candado usuario ausente en el momento de la visita se puede suspender de poste red abierta"
   ],
   [
     "118471",
@@ -1194,6 +1226,10 @@
   [
     "118495",
     "D_TIPO: Revisión Comercial Análisis Posterior\nLECTURA: 6932\nFECHA: *12/02/2025*  HORA: *15:20*\nD_OBSERBACION: Acción ejecutada\nOBSERVACION: 107\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita usuario no está presente, vecina informa que los propietarios vienen solo fines de semana , que la vivienda está sola, no se puede realizar revisión, medidor en el porche, lectura tomada desde la reja, ver fotos"
+  ],
+  [
+    "118514",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 83156\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *08:40*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca conforme tb conforme se suspende de bornera usuario ausente"
   ],
   [
     "118541",
@@ -1241,7 +1277,7 @@
   ],
   [
     "118670",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 3807\nFECHA: *25/03/2025*  HORA: *08:09*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar con suministro de energía regular,se tocó nadie atiende,se cincroniza la máquina no se cancela la orden,se suspendió de medidor, poste de cemento red abierta, usuario ausente,ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 3807\nFECHA: *25/03/2025*  HORA: *08:09*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar con suministro de energía regular,se tocó nadie atiende,se cincroniza la máquina no se cancela la orden,se suspendió de medidor, poste de cemento red abierta, usuario ausente,ver fotos\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 3807\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *08:52*\nD_OBSERBACION: SE ENCONTRO SUSPENDIDO\nOBSERVACION: 247\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca antigua sin 1 tornillo tb conforme se encuentra suspendio de bornera casa desocupada"
   ],
   [
     "118673",
@@ -1278,6 +1314,10 @@
   [
     "118808",
     "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 12708\nFECHA: *31/01/2025*  HORA: *08:25*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una cabaña se encontró con suministro regular se verifica suministro conforme se deja con suministro regular se observa medidor en columna en buen estado"
+  ],
+  [
+    "118819",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 14464\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *07:06*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una cabaña en abandono no hay usuario que atienda se encontró con suministro regular se deja sin suministro regular se observa medidor en fachada en buen estado"
   ],
   [
     "119140",
@@ -1334,6 +1374,10 @@
   [
     "120115",
     "D_TIPO: SUSPENSION DE MEDIDOR\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *24/02/2025*  HORA: *09:06*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: c2 en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita se tocó varias veces nadie atendió, no se pudo ingresar a realizar la toma de lectura ni la ejecución de la orden de suspensión, porton con candado, no hay timbre ,ver fotos"
+  ],
+  [
+    "120136",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 44257\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *27/04/2025*  HORA: *11:18*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita nadie atiende, no hay nadie presente, se procede a suspender el servicio de energía desde medidor, poste de cemento en buen estado, ver fotos"
   ],
   [
     "120162",
@@ -1426,6 +1470,10 @@
   [
     "122218",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 24180\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *16/04/2025*  HORA: *13:46*\nD_OBSERBACION: FACTURA CANCELADA\nOBSERVACION: 221\nD_REVISOR: SAID ALEXANDER CONTRERAS CALDE\nOBSERVACION_TEXTO: c8 factura cancelada usuario presentó factura, factura cancelada el día 16/04/2025 12.13 pm en el banco agrario valor 225.368$"
+  ],
+  [
+    "122223",
+    "D_TIPO: Revisión Comercial Análisis Posterior\nLECTURA: 9042\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *15:00*\nD_OBSERBACION: Anormalidad consumo justificado\nOBSERVACION: 101\nD_REVISOR: SAID ALEXANDER CONTRERAS CALDE\nOBSERVACION_TEXTO: se llego al sitio funciona vivíenda familiar habitada con suministro regular, medidor en fachada ct 1.7, pv conforme, por conforme, pi conforme, tb conforme, tp conforme, pa conforme, inspección visual de medidor conforme,  pruebas de medidor conforme,   se visualiza instalaciones internas domiciliarias que no cumplen, empalmes en mal estado, se le informa al usuario mantener instalaciones en buen estado para un correcto funcionamiento,  en el momento no sé presentan fugas consumo facturado conforme ver foto"
   ],
   [
     "122257",
@@ -1653,7 +1701,7 @@
   ],
   [
     "126605",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 15637\nFECHA: *24/02/2025*  HORA: *09:27*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JHON ALEXANDER CAMPEROS VARGAS\nOBSERVACION_TEXTO: vivienda en buen estado habitada con suministro regular, se tocó varias veces nadie atiende, se procede a suspender el servicio, ver foto"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 15637\nFECHA: *24/02/2025*  HORA: *09:27*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JHON ALEXANDER CAMPEROS VARGAS\nOBSERVACION_TEXTO: vivienda en buen estado habitada con suministro regular, se tocó varias veces nadie atiende, se procede a suspender el servicio, ver foto\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 15707\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *26/04/2025*  HORA: *08:57*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JHON ALEXANDER CAMPEROS VARGAS\nOBSERVACION_TEXTO: vivienda en buen estado habitada con suministro regular, medidor sin tapa bornera, usuario tiende a autoreconectarse, en el momento de la visita no hay nadie quien atienda, ver foto."
   ],
   [
     "126615",
@@ -1853,11 +1901,11 @@
   ],
   [
     "129987",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 20870\nFECHA: *02/01/2025*  HORA: *12:37*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE DEJA SERVICIO SUSPENDIDO MEDIDOR EN CAJA ANTIFRAUDE EN EL POSTE TB C NO SE OBSERVA IRREGULARIDADES VER FOTO\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 20870\nFECHA: *08/01/2025*  HORA: *14:35*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado, al momento de la visita no hay nadie presente, se reconecta el servicio de energía desde medidor, ver fotos\n\nD_TIPO: SUSPENSION DE MEDIDOR\nFECHA: *28/03/2025*  HORA: *12:04*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona granja avícola con suministro de energía regular medidor de energía en buenas condiciones en poste, se llega al predio verificando con encargado no an cancelado la factura de energía se procede a realizar la suspensión del servicio de medidor dejando el lugar sin servicio, ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 20870\nFECHA: *02/01/2025*  HORA: *12:37*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE DEJA SERVICIO SUSPENDIDO MEDIDOR EN CAJA ANTIFRAUDE EN EL POSTE TB C NO SE OBSERVA IRREGULARIDADES VER FOTO\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 20870\nFECHA: *08/01/2025*  HORA: *14:35*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado, al momento de la visita no hay nadie presente, se reconecta el servicio de energía desde medidor, ver fotos\n\nD_TIPO: SUSPENSION DE MEDIDOR\nFECHA: *28/03/2025*  HORA: *12:04*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona granja avícola con suministro de energía regular medidor de energía en buenas condiciones en poste, se llega al predio verificando con encargado no an cancelado la factura de energía se procede a realizar la suspensión del servicio de medidor dejando el lugar sin servicio, ver fotos\n\nD_TIPO: Revisión Comercial Análisis Posterior\nLECTURA: 23244\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *10:55*\nD_OBSERBACION: Lectura confirmada\nOBSERVACION: 102\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar y granja avícola sin suministro de energía regular servicio suspendido por pago hace un mes, motivo por el cual no se le pueden realizar pruebas al medidor, se verifica la lectura inspección visual del medidor conforme, no se sabe la razón de la variación del consumo , encargado manifiesta q la vivienda tiene más de 4 meses desocupada  y lo único q está activo es un galpón con  8 bombillas ahorradoras de 20 vatios, ver fotos"
   ],
   [
     "129993",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nFECHA: *28/03/2025*  HORA: *11:06*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar en buen estado habitada con suministro de energía regular medidor de energía en buenas condiciones, se llega al predio tocando varias veces usuario ausente se procede a realizar la suspensión del servicio de energía de medidor dejando la vivienda sin servicio ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nFECHA: *28/03/2025*  HORA: *11:06*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar en buen estado habitada con suministro de energía regular medidor de energía en buenas condiciones, se llega al predio tocando varias veces usuario ausente se procede a realizar la suspensión del servicio de energía de medidor dejando la vivienda sin servicio ver fotos\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 8240\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *10:57*\nD_OBSERBACION: SE ENCONTRO SUSPENDIDO\nOBSERVACION: 247\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar en buen estado dueños bienen en ocasiones se encuentran con el servicio suspendido de medidor , usuario ausente al momento de la visita"
   ],
   [
     "130009",
@@ -1917,7 +1965,7 @@
   ],
   [
     "130105",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *02/01/2025*  HORA: *16:05*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: C2 MEDIDOR ADENTRO PORTÓN PRINCIPAL CON CANDADO EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE. SE SOLICITA REUBICACIÓN DEL MEDIDOR A LA FACHADA PARA REVISIÓN O TOMAS DE LECTURA SE TOMA REGISTRO FOTOGRÁFICO"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *02/01/2025*  HORA: *16:05*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: C2 MEDIDOR ADENTRO PORTÓN PRINCIPAL CON CANDADO EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE. SE SOLICITA REUBICACIÓN DEL MEDIDOR A LA FACHADA PARA REVISIÓN O TOMAS DE LECTURA SE TOMA REGISTRO FOTOGRÁFICO\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA:  \nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *28/04/2025*  HORA: *08:35*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: C2 EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE OBSERVA MEDIDOR MEDIDOR ADENTRO DEL ENREJADO DEL INMUEBLE SE TOCA VARIAS VECES NADIE ATIENDE SE TOMA REGISTRO FOTOGRÁFICO"
   ],
   [
     "130107",
@@ -2033,7 +2081,7 @@
   ],
   [
     "137649",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 1989\nFECHA: *28/02/2025*  HORA: *09:18*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SAID ALEXANDER CONTRERAS CALDE\nOBSERVACION_TEXTO: se llego al sitio se toca varias veces nadie salió usuario ausente, medidor en fachada se visualiza en buen estado tb conforme, caja antifraude, se retira sello 00012803, se dejó sin suministro ver foto"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 1989\nFECHA: *28/02/2025*  HORA: *09:18*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SAID ALEXANDER CONTRERAS CALDE\nOBSERVACION_TEXTO: se llego al sitio se toca varias veces nadie salió usuario ausente, medidor en fachada se visualiza en buen estado tb conforme, caja antifraude, se retira sello 00012803, se dejó sin suministro ver foto\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 1989\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *08:56*\nD_OBSERBACION: SE ENCONTRO SUSPENDIDO\nOBSERVACION: 247\nD_REVISOR: ALLEX DANTEE BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: funciona vivienda en buen estado sin suministro de energía eléctrica, medidor ubicado en la fachada de la vivienda en buen estado, no se observa ninguna anormalidad, vivienda sin suministro de energía eléctrica se encuentra suspendido, ver fotos"
   ],
   [
     "137665",
@@ -2521,7 +2569,7 @@
   ],
   [
     "142904",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 75318\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *04/04/2025*  HORA: *12:51*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se suspende de taco poco espacio para suspender de bornera"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 75318\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *04/04/2025*  HORA: *12:51*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se suspende de taco poco espacio para suspender de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 75458\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *14:55*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona apto familiar con suministro de energía regular,se encontró reconectado se revisa conexión y se ajustan tornillos de bornera,ver fotos"
   ],
   [
     "142920",
@@ -2829,7 +2877,7 @@
   ],
   [
     "144404",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 87576\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *14/04/2025*  HORA: *11:35*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en gabinete antiguo tb conforme se suspende de bornera"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 87576\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *14/04/2025*  HORA: *11:35*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en gabinete antiguo tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 87821\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *09:34*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local comercial carnicería con suministro de energía regular,se encontró reconectado,se revisa conexión,ver fotos"
   ],
   [
     "144409",
@@ -3053,7 +3101,7 @@
   ],
   [
     "145758",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 113069\nFECHA: *14/02/2025*  HORA: *07:17*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca antigua sin tb se suspende de bornera poste en buen estado red trenzada\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 113069\nFECHA: *14/02/2025*  HORA: *15:46*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca antigua sin tb se conecta de bornera se toma tensión casa con suministro\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 113661\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *23/04/2025*  HORA: *12:40*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ZAYED RAPHAEL CAMILO PABON MOLINA\nOBSERVACION_TEXTO: funciona vivienda familiar habitada con suministro regular medidor en buen estado en fachada se efectua suspención de medidor se deja sin suministro de energía eléctrica ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 113069\nFECHA: *14/02/2025*  HORA: *07:17*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca antigua sin tb se suspende de bornera poste en buen estado red trenzada\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 113069\nFECHA: *14/02/2025*  HORA: *15:46*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca antigua sin tb se conecta de bornera se toma tensión casa con suministro\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 113661\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *23/04/2025*  HORA: *12:40*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ZAYED RAPHAEL CAMILO PABON MOLINA\nOBSERVACION_TEXTO: funciona vivienda familiar habitada con suministro regular medidor en buen estado en fachada se efectua suspención de medidor se deja sin suministro de energía eléctrica ver fotos\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 113663\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *17:34*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona taller automotriz con suministro de energía regular,se encontró reconectado,medidor sin tapa bornera,tapa principal partida,ver fotos"
   ],
   [
     "145771",
@@ -3074,6 +3122,10 @@
   [
     "145888",
     "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 50314\nFECHA: *17/02/2025*  HORA: *14:35*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona apto familiar sin suministro de energía regular,se deja con suministro de energía regular,se tocó la puerta nadie atiende, usuario ausente,ver fotos"
+  ],
+  [
+    "145923",
+    "D_TIPO: Revisión Comercial General\nLECTURA: 18447\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *10:47*\nD_OBSERBACION: Lectura confirmada\nOBSERVACION: 102\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar con suministro de energía regular,medidor por dentro del predio, usuario permite el ingreso y se recupera la lectura, inspección visual del medidor conforme,no se hallan irregularidades,ver fotos"
   ],
   [
     "145939",
@@ -3816,6 +3868,10 @@
     "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 30531\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *04/04/2025*  HORA: *16:01*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca antigua tb conforme se conecta de bornera se toma tensión casa con suministro\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 30531\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *04/04/2025*  HORA: *08:52*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en fachada ca antigua tb conforme se suspende de bornera"
   ],
   [
+    "149414",
+    "D_TIPO: Revisión Comercial General\nLECTURA: 1434\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *11:22*\nD_OBSERBACION: Acción ejecutada\nOBSERVACION: 107\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona panadería la gran cosecha con suministro de energía regular,trabajan en la producción y comercialización de todo lo relacionado con la panadería biscocheria,dirección cra 6#7-17 el centro Pamplona, como se puede ver en las fotos caja de medidor pegada con cemento no se puede abrir para realizarle pruebas al mismo,ver fotos"
+  ],
+  [
     "149419",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 84053\nFECHA: *07/03/2025*  HORA: *08:33*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: funciona local comercial con suministro de energía regular,se le informa al usuario de la suspension,se suspende de bornera,ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 84053\nFECHA: *07/03/2025*  HORA: *16:11*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local comercial droguería sin suministro de energía regular,se deja con suministro de energía regular,ver fotos"
   ],
@@ -4241,7 +4297,7 @@
   ],
   [
     "151871",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 31998\nFECHA: *02/01/2025*  HORA: *11:45*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE INDAGO CON USUARIO SE SOLICITO BAJAR LOS TACOS SE DEJA SERVICIO SUSPENDIDO MEDIDOR BUEN ESTADO SIN TAPA BORNERA EN CAJA ANTIFRAUDE EN FACHADA DE LA VIVIENDA SE TOMA REGISTRO FOTOGRÁFICO\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 31998\nFECHA: *08/01/2025*  HORA: *08:12*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una cabaña familiar se encontró con suministro regular se verifica suministro conforme se deja con suministro regular se observa medidor en fachada en buen estado\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 32779\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nFECHA: *20/02/2025*  HORA: *09:05*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita no hay nadie presente en la vivienda, se procede a suspender el servicio de energía desde medidor, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 32779\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nFECHA: *21/02/2025*  HORA: *17:56*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se le reconecto el servicio de energía desde medidor, ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 31998\nFECHA: *02/01/2025*  HORA: *11:45*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE INDAGO CON USUARIO SE SOLICITO BAJAR LOS TACOS SE DEJA SERVICIO SUSPENDIDO MEDIDOR BUEN ESTADO SIN TAPA BORNERA EN CAJA ANTIFRAUDE EN FACHADA DE LA VIVIENDA SE TOMA REGISTRO FOTOGRÁFICO\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 31998\nFECHA: *08/01/2025*  HORA: *08:12*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una cabaña familiar se encontró con suministro regular se verifica suministro conforme se deja con suministro regular se observa medidor en fachada en buen estado\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 32779\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nFECHA: *20/02/2025*  HORA: *09:05*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita no hay nadie presente en la vivienda, se procede a suspender el servicio de energía desde medidor, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 32779\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nFECHA: *21/02/2025*  HORA: *17:56*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se le reconecto el servicio de energía desde medidor, ver fotos\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 33853\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *12:58*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía al momento de la visita nadie atiende, no hay nadie en la casa, se procede a suspender el servicio de energía desde medidor, ver fotos"
   ],
   [
     "151879",
@@ -4381,7 +4437,7 @@
   ],
   [
     "153867",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 19726\nFECHA: *28/02/2025*  HORA: *15:31*\nD_OBSERBACION: VISITA PERSUASIVA\nOBSERVACION: 241\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se llega a terreno se ubica medidor en fachada no se puede suspender hay panal de abeja ver foto se puede suspender de poste usuario ausente en el momento de la visita"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 19726\nFECHA: *28/02/2025*  HORA: *15:31*\nD_OBSERBACION: VISITA PERSUASIVA\nOBSERVACION: 241\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se llega a terreno se ubica medidor en fachada no se puede suspender hay panal de abeja ver foto se puede suspender de poste usuario ausente en el momento de la visita\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 19898\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *09:48*\nD_OBSERBACION: USUARIO IMPIDE SUSPENSION\nOBSERVACION: 222\nD_REVISOR: ELVER DAVID GONZALEZ PEÑALOZA\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar habitada en buen estado con suministro regular medidor en buen caja con avispas y usuario impide la suspensión manifiesta que cancela factura de inmediato  ver fotos"
   ],
   [
     "153882",
@@ -4585,7 +4641,7 @@
   ],
   [
     "191545",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 18695\nFECHA: *27/02/2025*  HORA: *08:43*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JHON ALEXANDER CAMPEROS VARGAS\nOBSERVACION_TEXTO: vivienda en buen estado habitada con suministro regular, se tocó varias veces nadie atiende, se procede a suspender el servicio, ver foto"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 18695\nFECHA: *27/02/2025*  HORA: *08:43*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JHON ALEXANDER CAMPEROS VARGAS\nOBSERVACION_TEXTO: vivienda en buen estado habitada con suministro regular, se tocó varias veces nadie atiende, se procede a suspender el servicio, ver foto\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 18716\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *11:13*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SAID ALEXANDER CONTRERAS CALDE\nOBSERVACION_TEXTO: se llego al sitio se toca varias veces nadie salió usuario ausente, medidor en fachada, caja antigua, sin tb, sin sellos, poste de fibra, en buen  estado red abierta se dejó sin suministro"
   ],
   [
     "192049",
@@ -4641,11 +4697,15 @@
   ],
   [
     "193135",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 15868\nFECHA: *08/03/2025*  HORA: *13:18*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE DEJA SERVICIO SUSPENDIDO MEDIDOR BUEN ESTADO EN FACHADA SIN IRREGULARIDADES VER FOTO"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 15868\nFECHA: *08/03/2025*  HORA: *13:18*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE DEJA SERVICIO SUSPENDIDO MEDIDOR BUEN ESTADO EN FACHADA SIN IRREGULARIDADES VER FOTO\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 15870\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *14:06*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CONTRERAS SALCEDO BRALLAM ARLEY\nOBSERVACION_TEXTO: Funciona vivienda familiar en buen estado sin suministro regular de energía, se llaga al sitio usuario ausente se llama repetidamente nadie atiende,tapa bornera conforme se deja con suministro regular de energía se prueba tensión con suministro"
   ],
   [
     "193137",
     "D_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 20339\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nFECHA: *08/01/2025*  HORA: *11:07*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía al momento de la visita se encontró con servicio, no presentaron pago, se suspendió servicio de energía desde medidor, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nFECHA: *27/02/2025*  HORA: *00:00*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: 03-funciona vivienda familiar con suministro regular usuario manipula el medidor para reconectar no respeta suspension se ajustan tornillos"
+  ],
+  [
+    "193198",
+    "D_TIPO: Revisión Comercial Análisis Posterior\nLECTURA: 1143\nOBS_CONSUMO_T: VARIACIÓN NIVEL DE UTILIZACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *14:14*\nD_OBSERBACION: Anormalidad consumo justificado\nOBSERVACION: 101\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona un hotel campestre se hace prueba al vacío se observa medidor conforme se toma carga conforme usuario manifiesta que el mes pasado se habían dañado un motor del jacuzzi el encendedor por lo cual se deduce la alta de consumo se recomienda darle buen uso a los electrodomésticos para ahorro de energía se observa medidor en poste en buen estado"
   ],
   [
     "193343",
@@ -5085,7 +5145,7 @@
   ],
   [
     "213679",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 27958\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nFECHA: *21/02/2025*  HORA: *15:57*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita no hay nadie presente, se procede a suspender el servicio de energía desde medidor, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 27958\nFECHA: *22/02/2025*  HORA: *14:28*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO SE RECONECTA SERVICIO SE VERIFICA CONEXIÓN CON USUARIO MEDIDOR BUEN ESTADO EN FACHADA SIN IRREGULARIDADES VER FOTO\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 28241\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *26/04/2025*  HORA: *11:27*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE SOLICITA USUARIO BAJAR LOS TACOS SE DEJA SERVICIO SUSPENDIDO MEDIDOR EN FACHADA SIN IRREGULARIDADES VER FOTO"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 27958\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nFECHA: *21/02/2025*  HORA: *15:57*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita no hay nadie presente, se procede a suspender el servicio de energía desde medidor, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 27958\nFECHA: *22/02/2025*  HORA: *14:28*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO SE RECONECTA SERVICIO SE VERIFICA CONEXIÓN CON USUARIO MEDIDOR BUEN ESTADO EN FACHADA SIN IRREGULARIDADES VER FOTO\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 28241\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *26/04/2025*  HORA: *11:27*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE SOLICITA USUARIO BAJAR LOS TACOS SE DEJA SERVICIO SUSPENDIDO MEDIDOR EN FACHADA SIN IRREGULARIDADES VER FOTO\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 28263\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *14:57*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se encontró con el servicio de energía conectado, nadie atiende al momento de la visita, ver foto"
   ],
   [
     "213997",
@@ -5101,7 +5161,7 @@
   ],
   [
     "214432",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 33871\nFECHA: *03/03/2025*  HORA: *10:47*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona billar con suministro de energía regular,se le informa al usuario apagar todo y bajar breakers,se suspensión de medidor, medidor sin tapa bornera,poste de cemento, red trenzada,caja lonchera,ver fotos\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 33871\nFECHA: *04/03/2025*  HORA: *13:48*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local billar sin suministro de energía regular,se deja con suministro de energía regular,medidor sin tapa bornera,ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 33871\nFECHA: *03/03/2025*  HORA: *10:47*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona billar con suministro de energía regular,se le informa al usuario apagar todo y bajar breakers,se suspensión de medidor, medidor sin tapa bornera,poste de cemento, red trenzada,caja lonchera,ver fotos\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 33871\nFECHA: *04/03/2025*  HORA: *13:48*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local billar sin suministro de energía regular,se deja con suministro de energía regular,medidor sin tapa bornera,ver fotos\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA:  \nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T: NO EXISTE GEOGRÁFICAMENTE\nFECHA: *29/04/2025*  HORA: *14:13*\nD_OBSERBACION: NO EJECUTADA INCONVTES TECNICOS\nOBSERVACION: 232\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: c18 no se ubica medidor en terreno se observa conexión directa funciona local"
   ],
   [
     "214532",
@@ -5408,6 +5468,14 @@
     "D_TIPO: Visita Persuasiva\nLECTURA: 21850\nOBS_CONSUMO_T: VARIACIÓN NIVEL DE UTILIZACIÓN\nFECHA: *19/03/2025*  HORA: *18:01*\nD_OBSERBACION: ATENDIDA HABILIT MEDIDOR\nOBSERVACION: 12\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se hace visita persuasiva usuario se compromete a cancelar el día 20/03/25 medidor en fachada en buen estado"
   ],
   [
+    "278435",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 2816\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *16:32*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se llega a terreno se ubica medidor en fachada ca conforme tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 2816\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *16:47*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se llega a terreno se ubica medidor en fachada ca conforme tb conforme se conecta de bornera usuario ausente se toma tensión loc con suministro"
+  ],
+  [
+    "278458",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 31707\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *16:39*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se  ubica medidor en fachada ca sin tornillo se suspende de bornera usuario ausente\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 31707\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *16:17*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca conforme tb ojal partido se conecta de bornera se toma tensión loc con suministro"
+  ],
+  [
     "278493",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 476\nFECHA: *11/03/2025*  HORA: *12:49*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca conforme tb conforme se suspende de bornera poste en buen estado red trenzada"
   ],
@@ -5657,7 +5725,7 @@
   ],
   [
     "294953",
-    "D_TIPO: Revisión Comercial General\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *15/01/2025*  HORA: *16:30*\nD_OBSERBACION: Acción ejecutada\nOBSERVACION: 107\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se observa medidor dentro del predio se toca varias veces nadie atiende"
+    "D_TIPO: Revisión Comercial General\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *15/01/2025*  HORA: *16:30*\nD_OBSERBACION: Acción ejecutada\nOBSERVACION: 107\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se observa medidor dentro del predio se toca varias veces nadie atiende\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA:  \nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *29/04/2025*  HORA: *14:53*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: c2 medidor dentro de rejas con candado usuario ausente poste en buen estado red abierta"
   ],
   [
     "295207",
@@ -5841,7 +5909,7 @@
   ],
   [
     "307346",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 13371\nFECHA: *03/02/2025*  HORA: *08:31*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ELVER DAVID GONZALEZ PEÑALOZA\nOBSERVACION_TEXTO: se tocó varias veces nadie atiende casa habitada con suministro regular se suspendió de medidor ver fotos medidor sin tapa bornera\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 13371\nFECHA: *08/03/2025*  HORA: *10:48*\nD_OBSERBACION: SE ENCONTRO SUSPENDIDO\nOBSERVACION: 247\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca antigua sin tb se encuentran suspendio de bornera"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 13371\nFECHA: *03/02/2025*  HORA: *08:31*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ELVER DAVID GONZALEZ PEÑALOZA\nOBSERVACION_TEXTO: se tocó varias veces nadie atiende casa habitada con suministro regular se suspendió de medidor ver fotos medidor sin tapa bornera\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 13371\nFECHA: *08/03/2025*  HORA: *10:48*\nD_OBSERBACION: SE ENCONTRO SUSPENDIDO\nOBSERVACION: 247\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca antigua sin tb se encuentran suspendio de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 13371\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *09:51*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local de Hornamentacion sin suministro de energía regular,se deja con suministro de energía regular,medidor sin tapa bornera, usuario ausente,ver fotos"
   ],
   [
     "307483",
@@ -5980,6 +6048,10 @@
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 47634\nFECHA: *30/01/2025*  HORA: *10:12*\nD_OBSERBACION: FACTURA CANCELADA\nOBSERVACION: 221\nD_REVISOR: CONTRERAS SALCEDO BRALLAM ARLEY\nOBSERVACION_TEXTO: Funciona vivienda familiar en buen estado con suministro regular de energía al momento de la visita atiende dueño, presenta factura cancelada del día 29/01/2025 a las 11:54:53 am, en corresponsal de Bancolombia ver registro fotográfico"
   ],
   [
+    "312551",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 6869\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *14:37*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CONTRERAS SALCEDO BRALLAM ARLEY\nOBSERVACION_TEXTO: Funciona vivienda familiar en buen estado con suministro regular de energía, se llega al sitio se llama repetidamente se toca nadie atiende usuario ausente, tapa bornera conforme se deja sin suministro regular de energía ver registro fotográfico."
+  ],
+  [
     "312788",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 9010\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *01/04/2025*  HORA: *14:58*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se encontró con suministro regular se deja sin suministro regular\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 9017\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *07/04/2025*  HORA: *04:37*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se encontró con suministro regular se verifica suministro conforme se deja con suministro regular medidor en fachada en buen estado"
   ],
@@ -6033,7 +6105,7 @@
   ],
   [
     "317185",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 21252\nFECHA: *27/03/2025*  HORA: *14:08*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CONTRERAS SALCEDO BRALLAM ARLEY\nOBSERVACION_TEXTO: Funciona vivienda familiar en buen estado con suministro regular de energía, se llega al sitio nadie atiende se observa vivienda deshabitada, se deja sin suministro regular de energía ver registro fotográfico"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 21252\nFECHA: *27/03/2025*  HORA: *14:08*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CONTRERAS SALCEDO BRALLAM ARLEY\nOBSERVACION_TEXTO: Funciona vivienda familiar en buen estado con suministro regular de energía, se llega al sitio nadie atiende se observa vivienda deshabitada, se deja sin suministro regular de energía ver registro fotográfico\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA:  \nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *28/04/2025*  HORA: *13:46*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: C2 EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE OBSERVA MEDIDOR ADENTRO PORTÓN PRINCIPAL CON CANDADO SE TOCA NADIE ATIENDE SE TOMA REGISTRO FOTOGRÁFICO"
   ],
   [
     "317826",
@@ -6196,6 +6268,10 @@
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 18227\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *14/04/2025*  HORA: *13:15*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar con suministro de energía regular,se tocó varias veces la puerta nadie atiende,se cincroniza la máquina y no se cancela la orden,se suspendió de medidor,poste de cemento, red abierta, usuario ausente,ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 18227\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *14/04/2025*  HORA: *16:54*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar sin suministro de energía regular,se deja con suministro de energía regular,se tocó la puerta nadie atiende, usuario ausente,ver fotos"
   ],
   [
+    "400041",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 13851\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *12:23*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en poste ca conforme tb conforme"
+  ],
+  [
     "400106",
     "D_TIPO: SUSPENSION DE MEDIDOR\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *25/03/2025*  HORA: *11:57*\nD_OBSERBACION: 253 NO HAY ACCESO AL MEDIDOR - HAB PARA POSTE\nOBSERVACION: 253\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: C2 funciona vivienda familiar con suministro de energía regular, medidor por dentro del predio,reja principal con candado,poste de cemento red trenzada caja lonchera,ver fotos"
   ],
@@ -6214,6 +6290,10 @@
   [
     "400599",
     "D_TIPO: Revisión Comercial General\nLECTURA: 33421\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *24/04/2025*  HORA: *14:00*\nD_OBSERBACION: Anormalidad consumo justificado\nOBSERVACION: 101\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE OBSERVA MEDIDOR EN FACHADA SE TOMA CARGA FASE 1 2.08A. SE REALIZA PRUEBA AL VACÍO MEDIDOR NO REGISTRA CONSUMO EN AUSENCIA DE CARGA SE INDAGO CON USUARIO DICE QUE HABIA UNA NEVERA TRABAJANDO DIRECTA Y NO HACIA CICLO DE DESCARGA. SE OBSERVA MEDIDOR EN FACHADA SIN IRREGULARIDADES VER FOTO"
+  ],
+  [
+    "401156",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 33653\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *15:53*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en fachada ca antigua le falta 1 tornillo tb le falta 1 tornillo se suspende de bornera usuario manifiesta no llegar recibo"
   ],
   [
     "401403",
@@ -6333,7 +6413,7 @@
   ],
   [
     "409471",
-    "D_TIPO: Visita Persuasiva\nLECTURA: 6308\nFECHA: *05/03/2025*  HORA: *14:46*\nD_OBSERBACION: NO ATENDIDA HABILIT POSTE\nOBSERVACION: 15\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE SOLICITA A USUARIO PAGAR LA FACTURA DE ENERGÍA PARA EVITAR SUSPENSIÓN MEDIDOR BUEN ESTADO EN FACHADA SIN IRREGULARIDADES VER FOTO"
+    "D_TIPO: Visita Persuasiva\nLECTURA: 6308\nFECHA: *05/03/2025*  HORA: *14:46*\nD_OBSERBACION: NO ATENDIDA HABILIT POSTE\nOBSERVACION: 15\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE SOLICITA A USUARIO PAGAR LA FACTURA DE ENERGÍA PARA EVITAR SUSPENSIÓN MEDIDOR BUEN ESTADO EN FACHADA SIN IRREGULARIDADES VER FOTO\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 6654\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *16:01*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en fachada ca antigua tb conforme se suspende de bornera usuario se molesta por q se le suspendió\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 6654\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *16:55*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca antigua tb conforme se conecta de bornera se toma tensión casa con suministro"
   ],
   [
     "410176",
@@ -6696,6 +6776,10 @@
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 7843\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *03/04/2025*  HORA: *12:04*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ALLEX DANTEE BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: funciona vivienda en buen estado con suministro de energía eléctrica, medidor ubicado en el poste en buen estado, no se observa ninguna anormalidad, usuario ausente al momento de la visita, se realiza suspensión de medidor y se deja sin suministro, ver fotos"
   ],
   [
+    "434261",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 4687\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *14:23*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL  INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE DEJA SERVICIO SUSPENDIDO MEDIDOR BUEN ESTADO EN FACHADA SIN IRREGULARIDADES VER FOTO SE DEJA COPIA EN PORTERÍA"
+  ],
+  [
     "434273",
     "D_TIPO: Revisión Comercial General\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *20/01/2025*  HORA: *13:16*\nD_OBSERBACION: Reprogramar revisión\nOBSERVACION: 105\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda,cono se puede ver en las fotos medidor por dentro del predio,portón principal con candado,se tocó varias veces nadie atiende, usuario ausente,ver fotos\n\nD_TIPO: Revisión Comercial General\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *22/03/2025*  HORA: *17:14*\nD_OBSERBACION: Acción ejecutada\nOBSERVACION: 107\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar,como se puede ver en las fotos medidor por dentro del predio,reja principal con candado,se tocó varias veces nadie atiende,se deja comunicacion en la reja principal, usuario ausente,ver fotos"
   ],
@@ -6730,6 +6814,10 @@
   [
     "436394",
     "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 895\nFECHA: *11/02/2025*  HORA: *16:31*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca conforme tb conforme se encuentra conectado de bornera se toma tensión casa con suministro"
+  ],
+  [
+    "436550",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 25479\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *15:40*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en reca ca sin tornillo tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 25479\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *08:25*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca sin tornillo tb conforme se conecta de bornera se toma tensión casa con suministro"
   ],
   [
     "437041",
@@ -6936,6 +7024,10 @@
     "D_TIPO: Visita Persuasiva\nLECTURA: 11991\nFECHA: *08/03/2025*  HORA: *10:16*\nD_OBSERBACION: NO ATENDIDA HABILIT MEDIDOR\nOBSERVACION: 13\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local comercial con suministro de energía regular,se tocó nadie atiende,no se encontró a nadie encargado, medidor en gabinete, usuario ausente,ver fotos"
   ],
   [
+    "453137",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 19684\nOBS_CONSUMO_T: VARIACIÓN NIVEL DE UTILIZACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *14:59*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una cabaña familiar no hay usuario que atienda se encontró con suministro regular se deja sin suministro regular se observa medidor en fachada en buen estado"
+  ],
+  [
     "453391",
     "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 27596\nFECHA: *11/03/2025*  HORA: *14:28*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca sin tornillo tb ojal partido se encuentran conectado de bornera se toma tensión casa con suministro"
   ],
@@ -7054,6 +7146,10 @@
   [
     "461505",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 12005\nFECHA: *07/03/2025*  HORA: *09:43*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona kiosco con suministro de energía regular,no se encontró a nadie encargado,en el momento,se suspendió de medidor, medidor ubicado en gabinete,usuario ausente,ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 12005\nFECHA: *08/03/2025*  HORA: *07:47*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona kiosco sin suministro de energía regular,se deja con suministro de energía regular,ver fotos"
+  ],
+  [
+    "461514",
+    "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 3824\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:38*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se encontró con el servicio de energía conectado desde medidor, ver fotos\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 3817\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *10:12*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca conforme tb conforme se suspende de bornera   se le informa al usuario bajar los"
   ],
   [
     "461646",
@@ -7200,6 +7296,10 @@
     "D_TIPO: Revisión Comercial General\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *15/01/2025*  HORA: *16:34*\nD_OBSERBACION: Acción ejecutada\nOBSERVACION: 107\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se observa medidor dentro del predio se toca varias veces nadie atiende ver fotos"
   ],
   [
+    "473089",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 17458\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *14:46*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en fachada ca conforme tb conforme se suspende de bornera"
+  ],
+  [
     "474088",
     "D_TIPO: Visita Persuasiva\nLECTURA: 5676\nOBS_CONSUMO_T: VARIACIÓN NIVEL DE UTILIZACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *14/04/2025*  HORA: *12:07*\nD_OBSERBACION: ATENDIDA HABILIT MEDIDOR\nOBSERVACION: 12\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se hace visita persuasiva usuario se compromete hacer el pago 20/04/25 se le informa que el incumplimiento le generara la suspensión del servicio medidor en fachada en buen estado"
   ],
@@ -7237,7 +7337,7 @@
   ],
   [
     "476353",
-    "D_TIPO: Visita Persuasiva\nLECTURA: 30183\nFECHA: *04/03/2025*  HORA: *15:57*\nD_OBSERBACION: ATENDIDA HABILIT POSTE\nOBSERVACION: 14\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE INDAGO CON USUARIO ARGUMENTO QUE VA REALIZAR UN ABONO EL DIA DE MAÑANA SE OBSERVA MEDIDOR BUEN ESTADO SIN IRREGULARIDADES VER FOTO"
+    "D_TIPO: Visita Persuasiva\nLECTURA: 30183\nFECHA: *04/03/2025*  HORA: *15:57*\nD_OBSERBACION: ATENDIDA HABILIT POSTE\nOBSERVACION: 14\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE INDAGO CON USUARIO ARGUMENTO QUE VA REALIZAR UN ABONO EL DIA DE MAÑANA SE OBSERVA MEDIDOR BUEN ESTADO SIN IRREGULARIDADES VER FOTO\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 30580\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:47*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en fachada ca conforme tb conforme se suspende de bornera usuario no regala datos se molesta por q se le suspendió"
   ],
   [
     "476367",
@@ -7450,6 +7550,10 @@
   [
     "490655",
     "D_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 16348\nFECHA: *12/03/2025*  HORA: *10:34*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete poco espacio para suspender de bornera taco oxidado tornillo de baja breiker"
+  ],
+  [
+    "491205",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 1406\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *10:12*\nD_OBSERBACION: NO EJECUTADA INCONVTES TECNICOS\nOBSERVACION: 232\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: C19 funciona vivienda familiar con suministro de energía regular,cono se puede ver en las fotos medidor A7,no se puede suspender el medidor,se necesita pértiga para suspender,ver fotos"
   ],
   [
     "491256",
@@ -7678,6 +7782,10 @@
   [
     "508391",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 3797\nFECHA: *27/03/2025*  HORA: *12:31*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO CON SERVICIO REGULAR SE DEJA SERVICIO SUSPENDIDO MEDIDOR BUEN ESTADO EN EL POSTE SIN IRREGULARIDADES VER FOTO\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 3797\nFECHA: *28/03/2025*  HORA: *17:49*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE DEJA SERVICIO RECONECTADO SE VERIFICA CONEXIÓN SE TOMA REGISTRO FOTOGRÁFICO MEDIDOR BUEN ESTADO EN EL POSTE TB C SIN IRREGULARIDADES VER FOTO"
+  ],
+  [
+    "509357",
+    "D_TIPO: Revisión Comercial General\nLECTURA:  \nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *29/04/2025*  HORA: *13:53*\nD_OBSERBACION: Acción ejecutada\nOBSERVACION: 107\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita se tocó varias veces nadie atendió , reja con candado, usuarios vecinos informan que la pareja que habita la vivienda salen en la mañana a trabajar y regresan después de las 3 de la tarde, no se pudo tomar lectura , ver foto"
   ],
   [
     "509446",
@@ -7917,7 +8025,7 @@
   ],
   [
     "530200",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 1577\nFECHA: *22/02/2025*  HORA: *09:11*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SAID ALEXANDER CONTRERAS CALDE\nOBSERVACION_TEXTO: se llego al sitio medidor en poste en buen estado, tb conforme, funciona vivíenda familiar habitada con suministro regular se dejó sin suministro ver foto\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 1704\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *25/04/2025*  HORA: *11:21*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ALLEX DANTEE BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: funciona vivienda familiar habitada con suministro de energía eléctrica, medidor ubicado en el poste en buen estado, no se observa ninguna anormalidad, se realiza suspensión de medidor y se le recuerda al usuario realizar pago para generar orden de reconexión, ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 1577\nFECHA: *22/02/2025*  HORA: *09:11*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: SAID ALEXANDER CONTRERAS CALDE\nOBSERVACION_TEXTO: se llego al sitio medidor en poste en buen estado, tb conforme, funciona vivíenda familiar habitada con suministro regular se dejó sin suministro ver foto\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 1704\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *25/04/2025*  HORA: *11:21*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ALLEX DANTEE BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: funciona vivienda familiar habitada con suministro de energía eléctrica, medidor ubicado en el poste en buen estado, no se observa ninguna anormalidad, se realiza suspensión de medidor y se le recuerda al usuario realizar pago para generar orden de reconexión, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 1704\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *15:00*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: ALLEX DANTEE BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: funciona vivienda en buen estado sin suministro de energía eléctrica, medidor ubicado en el poste en buen estado, usuario ausente al momento de la visita, se realiza reconexión de medidor y se valida que quedó con suministro, ver fotos"
   ],
   [
     "530468",
@@ -7990,6 +8098,10 @@
   [
     "534305",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 22970\nFECHA: *03/02/2025*  HORA: *12:29*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ELVER DAVID GONZALEZ PEÑALOZA\nOBSERVACION_TEXTO: se tocó varias veces nadie atiende casa habitada con suministro regular se suspendió de medidor ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 22975\nFECHA: *05/02/2025*  HORA: *09:57*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona apto familiar sin suministro de energía regular,se deja con suministro de energía regular,se tocó varias veces nadie atiende, usuario ausente,ver fotos"
+  ],
+  [
+    "534564",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 30583\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *12:50*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CONTRERAS SALCEDO BRALLAM ARLEY\nOBSERVACION_TEXTO: Funciona vivienda en buen estado con suministro regular de energía, se llega al sitio se llama repetidamente nadie atiende se deja sin suministro regular de energía ver registro fotográfico"
   ],
   [
     "534802",
@@ -8184,6 +8296,10 @@
     "D_TIPO: Revisión Comercial Análisis Posterior\nLECTURA: 8745\nFECHA: *08/02/2025*  HORA: *17:18*\nD_OBSERBACION: Anormalidad consumo justificado\nOBSERVACION: 101\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se hace prueba al vacío medidor conforme se toma carga nevera se observa directa por lo cual se deduce la alta de consumo se recomienda al usuario hacer su respectivo arreglo para normalizar el consumo medidor en fachada en buen estado con suministro regular"
   ],
   [
+    "547539",
+    "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 11912\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *17:44*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se encontró sin suministro regular se deja con suministro regular se observa medidor en fachada en buen estado\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 11912\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *16:01*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en fachada ca antigua tb conforme se suspende de bornera se sincroniza no aparece pago"
+  ],
+  [
     "547969",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 37179\nFECHA: *27/01/2025*  HORA: *07:27*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona un estanco en buen estado y con suministro regular de energía, al momento de la visita el negocio está cerrado y nadie atiende, se procede a suspender el servicio de energía desde medidor, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 37179\nFECHA: *27/01/2025*  HORA: *16:32*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada en gabinete tb conforme se conecta de bornera loc con suministro"
   ],
@@ -8253,7 +8369,7 @@
   ],
   [
     "553027",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 9621\nFECHA: *28/03/2025*  HORA: *10:38*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar en buen estado habitada con suministro de energía regular medidor de energía en buenas condiciones en columna de concreto, se llega al predio verificando no an cancelado la factura se bajan los braker se deja la vivienda sin servicio ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 9621\nFECHA: *28/03/2025*  HORA: *10:38*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar en buen estado habitada con suministro de energía regular medidor de energía en buenas condiciones en columna de concreto, se llega al predio verificando no an cancelado la factura se bajan los braker se deja la vivienda sin servicio ver fotos\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 9695\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *10:39*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar en buen estado habitada con suministro de energía regular medidor de energía en buenas condiciones en columna de concreto, sé llega al predio verificando con usuario no an cancelado la factura se bajan los braker y se procede a realizar la suspensión del servicio de energía de medidor dejando sin servicio la vivienda, no tiene tapa bornera ver fotos"
   ],
   [
     "553047",
@@ -8330,6 +8446,10 @@
   [
     "557695",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 21031\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *04/04/2025*  HORA: *13:06*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: NESTOR JULIAN MORENO ANGARITA\nOBSERVACION_TEXTO: en el sitio funciona vivienda familiar en buen estado con suministro regular se hace el llamado nadie atiende puertas con candado se procede a realizar suspensión del servicio medidor en poste en buen estado no se retiran sellos no se instalan sellos y se deja sin suministro ver fotos"
+  ],
+  [
+    "557979",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 9298\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *12:45*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se suspende de bornera usuario ausente"
   ],
   [
     "558007",
@@ -8462,6 +8582,10 @@
   [
     "572264",
     "D_TIPO: Revisión Comercial General\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *04/01/2025*  HORA: *15:14*\nD_OBSERBACION: Reprogramar revisión\nOBSERVACION: 105\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor dentro de rejas con candado nadien atiende"
+  ],
+  [
+    "572425",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 14744\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *12:01*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en gabinete tb conforme se suspende de bornera"
   ],
   [
     "572557",
@@ -8636,6 +8760,10 @@
     "D_TIPO: Visita Persuasiva\nLECTURA: 20054\nFECHA: *26/02/2025*  HORA: *15:27*\nD_OBSERBACION: NO ATENDIDA HABILIT MEDIDOR\nOBSERVACION: 13\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita nadie atiende, no hay a quien informarle de la orden de suspensión próxima a generar por el atraso con el pago de la factura de energía, medidor ubicado en la fachada, en gabinete, ver fotos"
   ],
   [
+    "593159",
+    "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 6393\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *17:33*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona una vivienda familiar se encontró sin suministro regular se deja con suministro regular se observa medidor en fachada en buen estado\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 6393\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *14:25*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende se suspende de bornera ca conforme tb conforme usuario sale después de suspender"
+  ],
+  [
     "593861",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 6559\nFECHA: *12/02/2025*  HORA: *09:59*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado y con suministro regular de energía, al momento de la visita usuario no presenta factura cancelada se procede a suspender el servicio de energía desde medidor, ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 6559\nFECHA: *14/02/2025*  HORA: *12:35*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona apto familiar sin suministro de energía regular,se deja con suministro de energía regular,se tocó varias veces la puerta nadie atiende, usuario ausente,ver fotos"
   ],
@@ -8756,6 +8884,10 @@
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 13791\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *08/04/2025*  HORA: *09:47*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ZAYED RAPHAEL CAMILO PABON MOLINA\nOBSERVACION_TEXTO: funciona vivienda familiar habitada con suministro regular medidor en buen estado,se tocó varias veces nadie atiende el predio se efectua suspención de medidor se deja sin suministro de energía eléctrica ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 13791\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *08/04/2025*  HORA: *16:41*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: ZAYED RAPHAEL CAMILO PABON MOLINA\nOBSERVACION_TEXTO: funciona vivienda familiar habitada con suministro regular medidor en buen estado en fachada se efectua reconexion de medidor se deja con suministro de energía eléctrica"
   ],
   [
+    "604107",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 95444\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *10:43*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en fachada ca conforme tb conforme se suspende de bornera"
+  ],
+  [
     "604811",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 35477\nFECHA: *12/03/2025*  HORA: *13:46*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se informa al usuario bajar los tacos medidor en poste ca conforme tb conforme se suspende de bornera"
   ],
@@ -8845,7 +8977,7 @@
   ],
   [
     "612400",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 9497\nFECHA: *29/01/2025*  HORA: *13:45*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE BAJO PIN DE CORTE. SE DEJA SERVICIO SUSPENDIDO MEDIDOR BUEN ESTADO NO SE OBSERVA IRREGULARIDADES VER FOTO\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 9497\nFECHA: *05/02/2025*  HORA: *17:18*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar sin suministro de energía regular,se deja con suministro de energía regular,no se encontró a nadie encargado, usuario ausente,ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 9497\nFECHA: *29/01/2025*  HORA: *13:45*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR HABITADA EN BUEN ESTADO CON SERVICIO REGULAR SE BAJO PIN DE CORTE. SE DEJA SERVICIO SUSPENDIDO MEDIDOR BUEN ESTADO NO SE OBSERVA IRREGULARIDADES VER FOTO\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 9497\nFECHA: *05/02/2025*  HORA: *17:18*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar sin suministro de energía regular,se deja con suministro de energía regular,no se encontró a nadie encargado, usuario ausente,ver fotos\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 9730\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *07:29*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar en buen estado habitada con suministro de energía regular medidor de energía en buenas condiciones en poste, se llega al predio tocando varias veces usuario ausente se procede a realizar la suspensión del servicio de energía de medidor dejando la vivienda sin servicio ver fotos"
   ],
   [
     "612435",
@@ -8930,6 +9062,10 @@
   [
     "620360",
     "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 15960\nFECHA: *21/01/2025*  HORA: *15:12*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se conecta de bornera se toma tensión apto con suministro"
+  ],
+  [
+    "621178",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 12989\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:28*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en fachada ca conforme tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 12991\nOBS_CONSUMO_T: VARIACIÓN NIVEL DE UTILIZACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *17:53*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona un local se encontró con suministro regular se verifica suministro conforme se deja con suministro regular"
   ],
   [
     "621310",
@@ -9093,7 +9229,7 @@
   ],
   [
     "637469",
-    "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 7552\nFECHA: *14/01/2025*  HORA: *06:50*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: DANILO BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: Funciona vivienda familiar habitada con suministro de energía eléctrica se realiza verificación de conexiones y ajustes de bornes, en el momento de la visita no se encuentra usuario. ver fotos."
+    "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 7552\nFECHA: *14/01/2025*  HORA: *06:50*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: DANILO BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: Funciona vivienda familiar habitada con suministro de energía eléctrica se realiza verificación de conexiones y ajustes de bornes, en el momento de la visita no se encuentra usuario. ver fotos.\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 8078\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:31*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: CONTRERAS SALCEDO BRALLAM ARLEY\nOBSERVACION_TEXTO: Funciona vivienda familiar en buen estado con suministro regular de energía, se llega al sitio se toca repetidamente nadie atiende, tapa bornera conforme se deja sin suministro regular de energía ver registro fotográfico"
   ],
   [
     "637501",
@@ -9114,6 +9250,10 @@
   [
     "638662",
     "D_TIPO: Visita Persuasiva\nLECTURA: 5850\nFECHA: *16/01/2025*  HORA: *12:16*\nD_OBSERBACION: VISITA NO ATENDIDA\nOBSERVACION: 3\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en gabinete se hace visita persuasiva no hay guíen atienda la visita paga a tiempo y evite costo adicionales por concepto de reconexión"
+  ],
+  [
+    "639027",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 17528\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *09:42*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en fachada ca sin tornillo tb conforme se suspende de bornera"
   ],
   [
     "639203",
@@ -9345,7 +9485,7 @@
   ],
   [
     "662851",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 20678\nFECHA: *06/02/2025*  HORA: *15:56*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funcionan zonas comunes de edificios con suministro de energía regular,se suspendió de medidor,atiende propietaria de apto,ver fotos\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 20678\nFECHA: *08/03/2025*  HORA: *15:28*\nD_OBSERBACION: SE ENCONTRO SUSPENDIDO\nOBSERVACION: 247\nD_REVISOR: DANILO BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: medidor alimenta zonas comunes de edificio en buen estado sin suministro regular, se encontró medidor suspendido de bornera, ver foto"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 20678\nFECHA: *06/02/2025*  HORA: *15:56*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funcionan zonas comunes de edificios con suministro de energía regular,se suspendió de medidor,atiende propietaria de apto,ver fotos\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 20678\nFECHA: *08/03/2025*  HORA: *15:28*\nD_OBSERBACION: SE ENCONTRO SUSPENDIDO\nOBSERVACION: 247\nD_REVISOR: DANILO BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: medidor alimenta zonas comunes de edificio en buen estado sin suministro regular, se encontró medidor suspendido de bornera, ver foto\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 20726\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *28/04/2025*  HORA: *08:05*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funcionan zonas comunes de edificio con suministro de energía regular,manipulan medidor para reconectarse,se revisa conexión y se ajustan tornillos de bornera,no se encontró a nadie encargado,ver fotos"
   ],
   [
     "663244",
@@ -9569,7 +9709,7 @@
   ],
   [
     "681942",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 7465\nFECHA: *25/01/2025*  HORA: *10:31*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en gabinete tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 7474\nFECHA: *27/01/2025*  HORA: *15:39*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se encontró con el servicio de energía conectado desde medidor, ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 7465\nFECHA: *25/01/2025*  HORA: *10:31*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en gabinete tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 7474\nFECHA: *27/01/2025*  HORA: *15:39*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se encontró con el servicio de energía conectado desde medidor, ver fotos\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 7796\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *11:28*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se suspende de bornera se toca varias veces nadie atiende usuario ausente\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 7796\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:27*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona una vivienda en buen estado a la cual se le reconecto el servicio de energía desde medidor, nadie atiende al momento de la visita, ver foto"
   ],
   [
     "682084",
@@ -9889,7 +10029,7 @@
   ],
   [
     "1031342",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 6636\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *24/04/2025*  HORA: *16:28*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en gabinete tb conforme se suspende de bornera"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 6636\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *24/04/2025*  HORA: *16:28*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en gabinete tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 6636\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *17:53*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona apto familiar sin suministro de energía regular,se deja con suministro de energía regular,ver fotos"
   ],
   [
     "1032577",
@@ -9909,7 +10049,7 @@
   ],
   [
     "1034231",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *13/01/2025*  HORA: *09:34*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: C2 funciona vivienda familiar con suministro de energía regular,como se puede ver en las fotos medidor por dentro del predio,se tocó varias veces nadie atiende, usuario ausente,ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *13/01/2025*  HORA: *09:34*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: C2 funciona vivienda familiar con suministro de energía regular,como se puede ver en las fotos medidor por dentro del predio,se tocó varias veces nadie atiende, usuario ausente,ver fotos\n\nD_TIPO: Revisión Comercial General\nLECTURA: 6494\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *10:10*\nD_OBSERBACION: Lectura confirmada\nOBSERVACION: 102\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar con suministro de energía regular,medidor por dentro del predio, usuaria permite el ingreso y se recupera la lectura, información visual del medidor conforme,no se hallan irregularidades,ver fotos"
   ],
   [
     "1034854",
@@ -10176,6 +10316,10 @@
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 6505\nFECHA: *20/01/2025*  HORA: *11:08*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: sé toca varias veces nadie atiende usuario ausente medidor en fachada en gabinete tb sin tornillo se suspende de bornera gabinete suministra 3 medidor"
   ],
   [
+    "1055850",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 3080\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *09:47*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en reja ca conforme tb conforme se suspende de bornera"
+  ],
+  [
     "1056479",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 3628\nFECHA: *25/02/2025*  HORA: *11:17*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE OBSERVA MEDIDOR EN FACHADA SE DEJA SERVICIO SUSPENDIDO MEDIDOR BUEN ESTADO SIN IRREGULARIDADES VER FOTO\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 3628\nFECHA: *26/02/2025*  HORA: *16:06*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: LEDYD YESID GARCIA VERA\nOBSERVACION_TEXTO: EL INMUEBLE ES UNA VIVIENDA FAMILIAR EN BUEN ESTADO CON SERVICIO REGULAR SE TOCA VARIAS VECES NADIE ATIENDE SE OBSERVA MEDIDOR EN FACHADA SIN IRREGULARIDADES VER FOTO"
   ],
@@ -10276,6 +10420,10 @@
     "D_TIPO: Revisión Comercial General\nLECTURA: 505\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nFECHA: *20/01/2025*  HORA: *12:08*\nD_OBSERBACION: Lectura confirmada\nOBSERVACION: 102\nD_REVISOR: CONTRERAS SALCEDO BRALLAM ARLEY\nOBSERVACION_TEXTO: Funciona vivienda familiar en buen estado con suministro regular de energía,se toca repetidamente nadie atiende se logra observar medidor adentro la reja se encuentra con candado la caja del medidor estaba sin la tapa se logra ver lectura y se recupera no se observan irregularidades ver foto\n\nD_TIPO: Revisión Comercial General\nLECTURA: 522\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *14/04/2025*  HORA: *14:07*\nD_OBSERBACION: Lectura confirmada\nOBSERVACION: 102\nD_REVISOR: CONTRERAS SALCEDO BRALLAM ARLEY\nOBSERVACION_TEXTO: Funciona vivienda en buen estado con suministro regular de energía se llega al sitio se encuentra usuario quien permite ingreso se logra recuperar la lectura medidor en buen estado no se observan irregularidades"
   ],
   [
+    "1061469",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 4495\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:10*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en fachada ca conforme tb conforme se suspende de bornera"
+  ],
+  [
     "1061470",
     "D_TIPO: Visita Persuasiva\nLECTURA: 6101\nFECHA: *06/02/2025*  HORA: *09:12*\nD_OBSERBACION: ATENDIDA CON COMPROMISO DE PAGO\nOBSERVACION: 1\nD_REVISOR: DANILO BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: Funciona apartamento familiar habitado con suministro de energía eléctrica, medidor en fachada en gabinete usuario se compromete a realizar pago el día 06/02/2025 ver fotos"
   ],
@@ -10290,6 +10438,10 @@
   [
     "1062090",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 2269\nFECHA: *25/01/2025*  HORA: *14:39*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en gabinete tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 2269\nFECHA: *27/01/2025*  HORA: *15:57*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se conecta de bornera se toma tensión apto con suministro"
+  ],
+  [
+    "1062106",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 1382\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *11:06*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se suspende de bornera usuario ausente\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 1387\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *18:06*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: SEBASTIAN ANTELIZ BRAND\nOBSERVACION_TEXTO: se llega al sitio funciona un apartamento se encontró sin suministro regular se deja con suministro regular medidor en gabinete"
   ],
   [
     "1062145",
@@ -10350,6 +10502,10 @@
   [
     "1066846",
     "D_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 2054\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *26/04/2025*  HORA: *07:00*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: DANILO BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: Funciona vivienda familiar habitada, sin suministro de energía eléctrica se efectuó reconexión de medidor se deja con suministro de energía eléctrica, medidor en fachada de vivienda, medidor en buen estado, no se observan irregularidades, predio solo usuario ausente en el momento de la visita. ver fotos."
+  ],
+  [
+    "1066881",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 7888\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *10:51*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada ca conforme tb conforme se suspende de bornera poste en buen estado red trenzada"
   ],
   [
     "1067171",
@@ -10472,6 +10628,10 @@
     "D_TIPO: SUSPENSION DE MEDIDOR\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *10/01/2025*  HORA: *09:35*\nD_OBSERBACION: NO HAY ACCESO AL MEDIDOR\nOBSERVACION: 224\nD_REVISOR: ZAYED RAPHAEL CAMILO PABON MOLINA\nOBSERVACION_TEXTO: funciona vivienda familiar habitada funciona parque recreacional zona de picnic ,medidor adentro del predio no se permite hacer la ejecución de la suspensión portón con candado se toca varias veces se llama al número que aparece en la terminal se llama el número de atención del parque recreacional y picnic no se permite El paso, letreros de propiedad privada,zona con cámaras de seguridad con alarma, letrero de no servicio no hay atención, se solicita hacer traslado del medidor para asegurar lectura y otras ejecuciones."
   ],
   [
+    "1078316",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 2400\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *11:54*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en fachada en gabinete tb conforme se suspende de bornera gabinete suministra varios medidores"
+  ],
+  [
     "1078565",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 6397\nFECHA: *02/01/2025*  HORA: *08:25*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se le informa al usuario bajar los tacos medidor en fachada ca conforme tb conforme poste en buen estado red trenzada"
   ],
@@ -10556,8 +10716,16 @@
     "D_TIPO: SUSPENSION DE MEDIDOR\nCAUSA_NO_LECTURA_T: IMPOSIBILIDAD DE ACCESO\nFECHA: *02/01/2025*  HORA: *13:49*\nD_OBSERBACION: ENCARGADO NO PERMITE INGRESO\nOBSERVACION: 223\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se llega a conjunto vigilante no permite manifiesta q no está manifiesta q no está autorizado para dejar en entrar sin orden del usuario de la vivienda vigilante de apellido rojas conjunto baru"
   ],
   [
+    "1083865",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 2539\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *10:24*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en fachada ca conforme tb conforme se suspende de bornera"
+  ],
+  [
     "1083935",
     "D_TIPO: Visita Persuasiva\nLECTURA: 3392\nOBS_CONSUMO_T: NO HAY JUSTIFICACIÓN\nCAUSA_NO_LECTURA_T:  \nFECHA: *07/04/2025*  HORA: *11:02*\nD_OBSERBACION: ATENDIDA CON COMPROMISO DE PAGO\nOBSERVACION: 1\nD_REVISOR: SAID ALEXANDER CONTRERAS CALDE\nOBSERVACION_TEXTO: se llego al sitio funciona vivíenda familiar habitada con suministro regular, medidor en fachada se visualiza en buen estado , usuario se compromete a cancelar factura el día 9/04/2025 se hace visita persuasiva ver foto"
+  ],
+  [
+    "1084191",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 769\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *11:16*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en reja ca conforme tb conforme se suspende de bornera gabinete puerta floja tb conforme se suspende de bornera usuario ausente"
   ],
   [
     "1084643",
@@ -10605,7 +10773,7 @@
   ],
   [
     "1088081",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 15483\nFECHA: *25/03/2025*  HORA: *10:26*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local comercial con suministro de energía regular,no se encontró a nadie encargado,se cincroniza la máquina y no se cancela la orden,se suspendió de medidor, usuario ausente,ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 15483\nFECHA: *25/03/2025*  HORA: *10:26*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local comercial con suministro de energía regular,no se encontró a nadie encargado,se cincroniza la máquina y no se cancela la orden,se suspendió de medidor, usuario ausente,ver fotos\n\nD_TIPO: VERIFICACION SUSPENSION DE MEDIDOR\nLECTURA: 15483\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *10:34*\nD_OBSERBACION: SE ENCONTRO SUSPENDIDO\nOBSERVACION: 247\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se encuentra suspendio de bornera"
   ],
   [
     "1088151",
@@ -10741,7 +10909,7 @@
   ],
   [
     "1095272",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 29625\nFECHA: *25/01/2025*  HORA: *13:23*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en gabinete tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 29626\nFECHA: *28/01/2025*  HORA: *17:30*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local comercial con suministro de energía regular, usuario manipula el medidor para reconectase,se revisa conexión y se ajustan tornillos de bornera,no se encontró a nadie encargado, usuario ausente,ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 29625\nFECHA: *25/01/2025*  HORA: *13:23*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en gabinete tb conforme se suspende de bornera\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 29626\nFECHA: *28/01/2025*  HORA: *17:30*\nD_OBSERBACION: SE ENCONTRO RECONECTADO DE MEDIDOR\nOBSERVACION: 302\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona local comercial con suministro de energía regular, usuario manipula el medidor para reconectase,se revisa conexión y se ajustan tornillos de bornera,no se encontró a nadie encargado, usuario ausente,ver fotos\n\nD_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 29805\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *09:10*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se ubica medidor en gabinete tb conforme se suspende de bornera gabinete suministra varios medidores usuario ausente\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 29805\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:52*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: CARLOS JAVIER VERA GARCIA\nOBSERVACION_TEXTO: en el predio funciona un local en buen estado al cual se le reconecto el servicio de energía desde medidor, al momento de la visita local está cerrado, nadie atiende, ver fotos"
   ],
   [
     "1095538",
@@ -10890,6 +11058,10 @@
   [
     "1106878",
     "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 3606\nFECHA: *10/01/2025*  HORA: *10:38*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: En el lugar funciona vivienda familiar y peluquería habitada con suministro de energía regular medidor de energía en buenas condiciones se llega al predio usuario no tiene la factura cancelada se procede a realizar la suspensión del servicio de energía se bajan los braker dejando la vivienda sin servicio usuario no firma ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 3606\nFECHA: *10/01/2025*  HORA: *17:30*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: JUAN CARLOS CALDERON\nOBSERVACION_TEXTO: en el lugar funciona vivienda familiar y peluquería habitada sin servicio de energía ,se procede a realizar la reconexión del servicio de energía de medidor dejando la vivienda con servicio, usuario no firma ver fotos"
+  ],
+  [
+    "1108542",
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 3450\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *15:35*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: HEYSON FERNEY ARIAS MENESES\nOBSERVACION_TEXTO: se toca varias veces nadie atiende usuario ausente medidor en fachada ca sin tornillo tb conforme se suspende de bornera"
   ],
   [
     "1108669",
@@ -11053,7 +11225,7 @@
   ],
   [
     "1128218",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 823\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *23/04/2025*  HORA: *12:49*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ELVER DAVID GONZALEZ PEÑALOZA\nOBSERVACION_TEXTO: se tocó varias veces nadie atiende casa habitada con suministro regular se suspendió de medidor ver foto wqw"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 823\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *23/04/2025*  HORA: *12:49*\nD_OBSERBACION: SE SUSPENDIO DE MEDIDOR\nOBSERVACION: 203\nD_REVISOR: ELVER DAVID GONZALEZ PEÑALOZA\nOBSERVACION_TEXTO: se tocó varias veces nadie atiende casa habitada con suministro regular se suspendió de medidor ver foto wqw\n\nD_TIPO: RECONEXION CLIENTES SUSPENDIDOS\nLECTURA: 823\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *10:32*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar sin suministro de energía regular,se deja con suministro de energía,se tocó nadie atiende, usuario ausente,ver fotos"
   ],
   [
     "1129024",
@@ -11201,7 +11373,7 @@
   ],
   [
     "1144466",
-    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 452\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *14/04/2025*  HORA: *13:28*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar con suministro de energía,se tocó la puerta nadie atiende,se cincroniza la máquina no se cancela la orden,se suspendió de medidor,sello RTB  # 2024019965,sello RTC #2024019966,poste de cemento red abierta, usuario ausente,ver fotos"
+    "D_TIPO: SUSPENSION DE MEDIDOR\nLECTURA: 452\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *14/04/2025*  HORA: *13:28*\nD_OBSERBACION: 250 SE SUSPENDIO DE MEDIDOR HAB PARA POSTE\nOBSERVACION: 250\nD_REVISOR: HOBER ALEJANDRO DAVILA VARGAS\nOBSERVACION_TEXTO: funciona vivienda familiar con suministro de energía,se tocó la puerta nadie atiende,se cincroniza la máquina no se cancela la orden,se suspendió de medidor,sello RTB  # 2024019965,sello RTC #2024019966,poste de cemento red abierta, usuario ausente,ver fotos\n\nD_TIPO: RECONEXION EN MEDIDOR\nLECTURA: 452\nOBS_CONSUMO_T:  \nCAUSA_NO_LECTURA_T:  \nFECHA: *29/04/2025*  HORA: *17:17*\nD_OBSERBACION: RECONEXION DE MEDIDOR EFECTUADA\nOBSERVACION: 301\nD_REVISOR: ALLEX DANTEE BOHORQUEZ GONZALEZ\nOBSERVACION_TEXTO: funciona vivienda en buen estado sin suministro de energía eléctrica, medidor ubicado en la fachada de la vivienda en buen estado, no se observa ninguna anormalidad, usuario ausente al momento de la visita, se realiza reconexión de medidor y se valida que quedó con suministro, ver fotos"
   ],
   [
     "1144951",
