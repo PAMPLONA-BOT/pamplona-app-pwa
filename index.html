@@ -644,74 +644,114 @@ function actualizarApp() {
     
     
     // Validación de cambio de mes con opción de borrar cache
-    (function () {
-        document.addEventListener("DOMContentLoaded", function () {
-            const fechaActual = new Date();
-            const mesActual = fechaActual.getMonth() + 1; // 1-12
-            const anioActual = fechaActual.getFullYear();
+(function() {
+    document.addEventListener("DOMContentLoaded", function() {
+        const fechaActual = new Date();
+        const mesActual = fechaActual.getMonth() + 1; // 1-12
+        const anioActual = fechaActual.getFullYear();
+        
+        // Obtener el último mes registrado
+        const ultimoMesUsado = localStorage.getItem('ultimoMesUsado');
+        const ultimoAnioUsado = localStorage.getItem('ultimoAnioUsado');
+        
+        // Si no hay registro o si el mes ha cambiado
+        if (!ultimoMesUsado || (ultimoAnioUsado < anioActual) || 
+            (ultimoAnioUsado == anioActual && ultimoMesUsado < mesActual)) {
             
-            // Obtener el último mes registrado
-            const ultimoMesUsado = localStorage.getItem('ultimoMesUsado');
-            const ultimoAnioUsado = localStorage.getItem('ultimoAnioUsado');
+            // Mostrar mensaje de cambio de mes como overlay
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            overlay.style.zIndex = '1000';
+            overlay.style.display = 'flex';
+            overlay.style.flexDirection = 'column';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.color = 'white';
+            overlay.style.padding = '20px';
+            overlay.style.textAlign = 'center';
             
-            // Si no hay registro o si el mes ha cambiado
-            if (!ultimoMesUsado || (ultimoAnioUsado < anioActual) || 
-                (ultimoAnioUsado == anioActual && ultimoMesUsado < mesActual)) {
-                
-                // Mostrar mensaje y botón de borrado
-                document.body.innerHTML = `
-                    <div style="padding: 50px; text-align: center;">
-                        <h2>¡Nuevo mes detectado!</h2>
-                        <p>Para actualizar correctamente la aplicación, por favor:</p>
-                        <button onclick="limpiarCacheYRecargar()" style="
-                            padding: 12px 24px;
-                            background-color: #ff5722;
-                            color: white;
-                            border: none;
-                            border-radius: 8px;
-                            font-size: 16px;
-                            cursor: pointer;
-                            margin: 20px;
-                            font-weight: bold;
-                        ">
-                            🗑️ BORRAR CACHE Y ACTUALIZAR
-                        </button>
-                        <p>Mes anterior: ${ultimoMesUsado || 'N/A'}/${ultimoAnioUsado || 'N/A'}<br>
-                        Mes actual: ${mesActual}/${anioActual}</p>
-                    </div>`;
-            } else {
-                // Guardar el mes/ano actual si no estaba registrado
-                localStorage.setItem('ultimoMesUsado', mesActual);
-                localStorage.setItem('ultimoAnioUsado', anioActual);
-            }
-        });
-
-        function limpiarCacheYRecargar() {
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.getRegistrations().then(function(registrations) {
-                    for (let reg of registrations) {
-                        reg.unregister();
-                    }
-                    return caches.keys();
-                }).then(function(cacheNames) {
-                    return Promise.all(
-                        cacheNames.map(function(cacheName) {
-                            return caches.delete(cacheName);
-                        })
-                    );
-                }).then(function() {
-                    // Actualizar el mes en localStorage y recargar
-                    const fecha = new Date();
-                    localStorage.setItem('ultimoMesUsado', fecha.getMonth() + 1);
-                    localStorage.setItem('ultimoAnioUsado', fecha.getFullYear());
-                    location.reload(true);
-                });
-            } else {
-                location.reload(true);
-            }
+            overlay.innerHTML = `
+                <h2>¡Nuevo mes detectado!</h2>
+                <p>Para actualizar correctamente la aplicación, por favor:</p>
+                <button onclick="limpiarCacheYRecargar()" style="
+                    padding: 12px 24px;
+                    background-color: #ff5722;
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    margin: 20px;
+                    font-weight: bold;
+                ">
+                    🗑️ BORRAR CACHE Y ACTUALIZAR
+                </button>
+                <p>Mes anterior: ${ultimoMesUsado || 'N/A'}/${ultimoAnioUsado || 'N/A'}<br>
+                Mes actual: ${mesActual}/${anioActual}</p>
+                <button onclick="this.parentNode.style.display='none'" style="
+                    padding: 8px 16px;
+                    background-color: #00796b;
+                    color: white;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    margin-top: 10px;
+                ">
+                    Continuar sin actualizar (no recomendado)
+                </button>
+            `;
+            
+            document.body.appendChild(overlay);
+        } else {
+            // Guardar el mes/ano actual si no estaba registrado
+            localStorage.setItem('ultimoMesUsado', mesActual);
+            localStorage.setItem('ultimoAnioUsado', anioActual);
         }
-        window.limpiarCacheYRecargar = limpiarCacheYRecargar;
-    })();
+    });
+
+    function limpiarCacheYRecargar() {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                // Eliminar todos los service workers registrados
+                const unregisterPromises = registrations.map(reg => reg.unregister());
+                return Promise.all(unregisterPromises);
+            }).then(function() {
+                // Eliminar todo el cache
+                return caches.keys().then(function(cacheNames) {
+                    const deletePromises = cacheNames.map(function(cacheName) {
+                        return caches.delete(cacheName);
+                    });
+                    return Promise.all(deletePromises);
+                });
+            }).then(function() {
+                // Actualizar el mes en localStorage
+                const fecha = new Date();
+                localStorage.setItem('ultimoMesUsado', fecha.getMonth() + 1);
+                localStorage.setItem('ultimoAnioUsado', fecha.getFullYear());
+                
+                // Forzar recarga desde el servidor
+                location.reload(true);
+            }).catch(function(error) {
+                console.error('Error al limpiar cache:', error);
+                alert('Error al limpiar cache. Intenta manualmente con Ctrl+F5.');
+                location.reload(true);
+            });
+        } else {
+            // Para navegadores sin service workers
+            const fecha = new Date();
+            localStorage.setItem('ultimoMesUsado', fecha.getMonth() + 1);
+            localStorage.setItem('ultimoAnioUsado', fecha.getFullYear());
+            location.reload(true);
+        }
+    }
+    window.limpiarCacheYRecargar = limpiarCacheYRecargar;
+})();
 
 </script></div></div><script>
 function mostrarInterfazSecundaria() {
