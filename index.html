@@ -540,11 +540,11 @@ function verificarInstalacion() {
 
   navigator.geolocation.getCurrentPosition(pos => {
     const mapaCod = {
-      "0": "{", "1": "#", "2": "1", "3": "¿", "4": "3",
-      "5": "?", "6": "5", "7": "}", "8": "6", "9": "7",
-      ".": "0", ",": "9", "-": "8"
+      "0": "A", "1": "B", "2": "C", "3": "D", "4": "E",
+      "5": "F", "6": "G", "7": "H", "8": "I", "9": "J",
+      ".": "K", ",": "L", "-": "M"
     };
-    const codificarCoord = c => [...c].map(l => mapaCod[l] || '').join('');
+    const codificarCoord = c => [...c].map(l => mapaLetras[l] || '').join('');
     const lat = pos.coords.latitude.toFixed(7);
     const lon = pos.coords.longitude.toFixed(7);
     const codificado = codificarCoord(lat + "," + lon);
