@@ -641,24 +641,78 @@ function actualizarApp() {
 <button class="button green" onclick="buscarDatos()" style="display:none;" type="button">Cliente</button>
 <button class="button blue" onclick="buscarDatosConLlave()" style="display:none;" type="button">Medidor</button>
 </form><div class="numero-consultado" id="numeroConsultado"></div><div id="resultados"></div><button class="btn-clear button" onclick="limpiarConsulta()" style="display:none;">Limpiar Consulta</button><script>
-    // Validación de mes y año
+    
+    <script>
+    // Validación de cambio de mes con opción de borrar cache
     (function () {
-        const fecha = new Date();
-        const mes = fecha.getMonth(); // 0 = Enero, 3 = Abril
-        const anio = fecha.getFullYear();
-
-        if (!(mes === 4 && anio === 2025)) {
-            document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
+            const fechaActual = new Date();
+            const mesActual = fechaActual.getMonth() + 1; // 1-12
+            const anioActual = fechaActual.getFullYear();
+            
+            // Obtener el último mes registrado
+            const ultimoMesUsado = localStorage.getItem('ultimoMesUsado');
+            const ultimoAnioUsado = localStorage.getItem('ultimoAnioUsado');
+            
+            // Si no hay registro o si el mes ha cambiado
+            if (!ultimoMesUsado || (ultimoAnioUsado < anioActual) || 
+                (ultimoAnioUsado == anioActual && ultimoMesUsado < mesActual)) {
+                
+                // Mostrar mensaje y botón de borrado
                 document.body.innerHTML = `
-                    <div style="padding: 50px; text-align: center; color: red;">
-                        <h2>Esta aplicación solo está disponible en <u>abril de 2025</u>.</h2>
-                        <p>Por favor actualiza esta pagina.</p>
-                        <button onclick="location.reload()">Volver a intentar</button>
+                    <div style="padding: 50px; text-align: center;">
+                        <h2>¡Nuevo mes detectado!</h2>
+                        <p>Para actualizar correctamente la aplicación, por favor:</p>
+                        <button onclick="limpiarCacheYRecargar()" style="
+                            padding: 12px 24px;
+                            background-color: #ff5722;
+                            color: white;
+                            border: none;
+                            border-radius: 8px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            margin: 20px;
+                            font-weight: bold;
+                        ">
+                            🗑️ BORRAR CACHE Y ACTUALIZAR
+                        </button>
+                        <p>Mes anterior: ${ultimoMesUsado || 'N/A'}/${ultimoAnioUsado || 'N/A'}<br>
+                        Mes actual: ${mesActual}/${anioActual}</p>
                     </div>`;
-            });
-            throw new Error("Aplicación fuera de fecha");
+            } else {
+                // Guardar el mes/ano actual si no estaba registrado
+                localStorage.setItem('ultimoMesUsado', mesActual);
+                localStorage.setItem('ultimoAnioUsado', anioActual);
+            }
+        });
+
+        function limpiarCacheYRecargar() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                    for (let reg of registrations) {
+                        reg.unregister();
+                    }
+                    return caches.keys();
+                }).then(function(cacheNames) {
+                    return Promise.all(
+                        cacheNames.map(function(cacheName) {
+                            return caches.delete(cacheName);
+                        })
+                    );
+                }).then(function() {
+                    // Actualizar el mes en localStorage y recargar
+                    const fecha = new Date();
+                    localStorage.setItem('ultimoMesUsado', fecha.getMonth() + 1);
+                    localStorage.setItem('ultimoAnioUsado', fecha.getFullYear());
+                    location.reload(true);
+                });
+            } else {
+                location.reload(true);
+            }
         }
+        window.limpiarCacheYRecargar = limpiarCacheYRecargar;
     })();
+</script>
 </script></div></div><script>
 function mostrarInterfazSecundaria() {
     document.getElementById('interfazPrincipal').style.display = 'none';
