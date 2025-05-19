@@ -643,30 +643,21 @@ function actualizarApp() {
 </form><div class="numero-consultado" id="numeroConsultado"></div><div id="resultados"></div><button class="btn-clear button" onclick="limpiarConsulta()" style="display:none;">Limpiar Consulta</button><script>
     
     
-    // Validación de cambio de mes con opción de borrar cache
+    // Validación y limpieza OBLIGATORIA de cache al cambiar de mes
 (function() {
-    document.addEventListener("DOMContentLoaded", function() {
-        const fechaActual = new Date();
-        const mesActual = fechaActual.getMonth() + 1; // 1-12
-        const anioActual = fechaActual.getFullYear();
-        
-        // Obtener el último mes registrado
-        const ultimoMesUsado = localStorage.getItem('ultimoMesUsado');
-        const ultimoAnioUsado = localStorage.getItem('ultimoAnioUsado');
-        
-        // Si no hay registro o si el mes ha cambiado
-        if (!ultimoMesUsado || (ultimoAnioUsado < anioActual) || 
-            (ultimoAnioUsado == anioActual && ultimoMesUsado < mesActual)) {
-            
-            // Mostrar mensaje de cambio de mes como overlay
+    // Función principal de limpieza completa
+    async function limpiarCacheCompleto() {
+        try {
+            // Mostrar overlay de progreso
             const overlay = document.createElement('div');
+            overlay.id = 'cache-cleaner-overlay';
             overlay.style.position = 'fixed';
             overlay.style.top = '0';
             overlay.style.left = '0';
             overlay.style.width = '100%';
             overlay.style.height = '100%';
-            overlay.style.backgroundColor = 'rgba(0,0,0,0.8)';
-            overlay.style.zIndex = '1000';
+            overlay.style.backgroundColor = 'rgba(0,0,0,0.95)';
+            overlay.style.zIndex = '10000';
             overlay.style.display = 'flex';
             overlay.style.flexDirection = 'column';
             overlay.style.justifyContent = 'center';
@@ -676,81 +667,159 @@ function actualizarApp() {
             overlay.style.textAlign = 'center';
             
             overlay.innerHTML = `
-                <h2>¡Nuevo mes detectado!</h2>
-                <p>Para actualizar correctamente la aplicación, por favor:</p>
-                <button onclick="limpiarCacheYRecargar()" style="
+                <h2 style="color: #4CAF50; margin-bottom: 20px;">Actualización Requerida</h2>
+                <div style="width: 80%; max-width: 300px; height: 20px; background: #333; border-radius: 10px; margin: 10px 0;">
+                    <div id="cleaner-progress-bar" style="width: 0%; height: 100%; background: #4CAF50; border-radius: 10px; transition: width 0.3s;"></div>
+                </div>
+                <p id="cleaner-progress-text" style="margin-top: 10px; color: #aaa;">Preparando actualización...</p>
+            `;
+            
+            document.body.appendChild(overlay);
+            
+            // Paso 1: Eliminar Service Workers y caches
+            actualizarProgreso('Eliminando datos antiguos...', 20);
+            if ('serviceWorker' in navigator) {
+                const registrations = await navigator.serviceWorker.getRegistrations();
+                await Promise.all(registrations.map(reg => reg.unregister()));
+                
+                const cacheNames = await caches.keys();
+                await Promise.all(cacheNames.map(name => caches.delete(name)));
+            }
+            
+            // Paso 2: Limpiar almacenamiento local
+            actualizarProgreso('Limpiando configuraciones...', 40);
+            localStorage.clear();
+            sessionStorage.clear();
+            
+            // Paso 3: Limpiar IndexedDB
+            actualizarProgreso('Actualizando bases de datos...', 60);
+            if (window.indexedDB) {
+                const dbs = await window.indexedDB.databases();
+                await Promise.all(dbs.map(db => {
+                    return new Promise((resolve, reject) => {
+                        const request = window.indexedDB.deleteDatabase(db.name);
+                        request.onsuccess = resolve;
+                        request.onerror = reject;
+                    });
+                }));
+            }
+            
+            // Paso 4: Eliminar cookies del dominio
+            actualizarProgreso('Finalizando limpieza...', 80);
+            document.cookie.split(';').forEach(cookie => {
+                const eqPos = cookie.indexOf('=');
+                const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.pamplona-bot.github.io`;
+            });
+            
+            // Actualizar mes/año en localStorage
+            const fecha = new Date();
+            localStorage.setItem('ultimoMesUsado', fecha.getMonth() + 1);
+            localStorage.setItem('ultimoAnioUsado', fecha.getFullYear());
+            
+            // Completado - Recargar
+            actualizarProgreso('¡Actualización completada!', 100);
+            setTimeout(() => {
+                window.location.href = window.location.origin + window.location.pathname + '?nocache=' + Date.now();
+            }, 1500);
+            
+            function actualizarProgreso(mensaje, porcentaje) {
+                const progressBar = document.getElementById('cleaner-progress-bar');
+                const progressText = document.getElementById('cleaner-progress-text');
+                
+                if (progressBar) progressBar.style.width = `${porcentaje}%`;
+                if (progressText) progressText.textContent = mensaje;
+            }
+            
+        } catch (error) {
+            console.error('Error en limpieza completa:', error);
+            document.getElementById('cache-cleaner-overlay').innerHTML = `
+                <h2 style="color: #f44336;">Error en la actualización</h2>
+                <p style="color: #ff9800;">La aplicación no puede continuar sin actualizar</p>
+                <button onclick="window.location.reload(true)" style="
                     padding: 12px 24px;
-                    background-color: #ff5722;
+                    background: #2196F3;
                     color: white;
                     border: none;
                     border-radius: 8px;
                     font-size: 16px;
                     cursor: pointer;
-                    margin: 20px;
-                    font-weight: bold;
+                    margin-top: 20px;
                 ">
-                    🗑️ BORRAR CACHE Y ACTUALIZAR
+                    Recargar manualmente (Ctrl+F5)
                 </button>
-                <p>Mes anterior: ${ultimoMesUsado || 'N/A'}/${ultimoAnioUsado || 'N/A'}<br>
-                Mes actual: ${mesActual}/${anioActual}</p>
-                <button onclick="this.parentNode.style.display='none'" style="
-                    padding: 8px 16px;
-                    background-color: #00796b;
-                    color: white;
-                    border: none;
-                    border-radius: 6px;
-                    font-size: 14px;
-                    cursor: pointer;
-                    margin-top: 10px;
-                ">
-                    Continuar sin actualizar (no recomendado)
-                </button>
+            `;
+        }
+    }
+    
+    // Verificación OBLIGATORIA al cargar
+    document.addEventListener("DOMContentLoaded", function() {
+        const fechaActual = new Date();
+        const mesActual = fechaActual.getMonth() + 1;
+        const anioActual = fechaActual.getFullYear();
+        
+        const ultimoMesUsado = localStorage.getItem('ultimoMesUsado');
+        const ultimoAnioUsado = localStorage.getItem('ultimoAnioUsado');
+        
+        // Si detecta cambio de mes, limpieza OBLIGATORIA
+        if (!ultimoMesUsado || (ultimoAnioUsado < anioActual) || 
+            (ultimoAnioUsado == anioActual && ultimoMesUsado < mesActual)) {
+            
+            // Mostrar mensaje de actualización obligatoria
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0,0,0,0.95)';
+            overlay.style.zIndex = '10000';
+            overlay.style.display = 'flex';
+            overlay.style.flexDirection = 'column';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.color = 'white';
+            overlay.style.padding = '20px';
+            overlay.style.textAlign = 'center';
+            
+            overlay.innerHTML = `
+                <div style="background: #222; padding: 30px; border-radius: 10px; max-width: 500px; width: 90%;">
+                    <h2 style="color: #4CAF50; margin-top: 0;">Actualización Requerida</h2>
+                    <p>La aplicación debe actualizarse para el nuevo mes.</p>
+                    
+                    <div style="background: #333; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                        <p style="margin: 5px 0;"><strong>Mes anterior:</strong> ${ultimoMesUsado || 'N/A'}/${ultimoAnioUsado || 'N/A'}</p>
+                        <p style="margin: 5px 0;"><strong>Mes actual:</strong> ${mesActual}/${anioActual}</p>
+                    </div>
+                    
+                    <p style="color: #FF9800; margin-bottom: 20px;">Se borrarán todos los datos locales para garantizar el correcto funcionamiento.</p>
+                    
+                    <div id="countdown" style="font-size: 18px; margin: 20px 0;">
+                        Iniciando actualización en 5 segundos...
+                    </div>
+                </div>
             `;
             
             document.body.appendChild(overlay);
+            
+            // Cuenta regresiva antes de limpiar automáticamente
+            let segundos = 5;
+            const countdownElement = document.getElementById('countdown');
+            const countdownInterval = setInterval(() => {
+                segundos--;
+                countdownElement.textContent = `Iniciando actualización en ${segundos} segundos...`;
+                
+                if (segundos <= 0) {
+                    clearInterval(countdownInterval);
+                    limpiarCacheCompleto();
+                }
+            }, 1000);
         } else {
-            // Guardar el mes/ano actual si no estaba registrado
+            // Guardar el mes/año actual si no estaba registrado
             localStorage.setItem('ultimoMesUsado', mesActual);
             localStorage.setItem('ultimoAnioUsado', anioActual);
         }
     });
-
-    function limpiarCacheYRecargar() {
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(function(registrations) {
-                // Eliminar todos los service workers registrados
-                const unregisterPromises = registrations.map(reg => reg.unregister());
-                return Promise.all(unregisterPromises);
-            }).then(function() {
-                // Eliminar todo el cache
-                return caches.keys().then(function(cacheNames) {
-                    const deletePromises = cacheNames.map(function(cacheName) {
-                        return caches.delete(cacheName);
-                    });
-                    return Promise.all(deletePromises);
-                });
-            }).then(function() {
-                // Actualizar el mes en localStorage
-                const fecha = new Date();
-                localStorage.setItem('ultimoMesUsado', fecha.getMonth() + 1);
-                localStorage.setItem('ultimoAnioUsado', fecha.getFullYear());
-                
-                // Forzar recarga desde el servidor
-                location.reload(true);
-            }).catch(function(error) {
-                console.error('Error al limpiar cache:', error);
-                alert('Error al limpiar cache. Intenta manualmente con Ctrl+F5.');
-                location.reload(true);
-            });
-        } else {
-            // Para navegadores sin service workers
-            const fecha = new Date();
-            localStorage.setItem('ultimoMesUsado', fecha.getMonth() + 1);
-            localStorage.setItem('ultimoAnioUsado', fecha.getFullYear());
-            location.reload(true);
-        }
-    }
-    window.limpiarCacheYRecargar = limpiarCacheYRecargar;
 })();
 
 </script></div></div><script>
