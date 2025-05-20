@@ -600,31 +600,140 @@ function copiarReporte() {
 }
 
 
-</script><button onclick="actualizarApp()" style="
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ffc107;
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-">🔁 Actualizar App (recargar desde GitHub)</button><script>
+
 function actualizarApp() {
-  if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+  // Mostrar confirmación antes de proceder
+  if (!confirm("¿Estás seguro de que quieres actualizar la aplicación?\nSe borrarán todos los datos locales y se recargará la aplicación.")) {
+    return;
+  }
+
+  // Crear overlay de progreso
+  const overlay = document.createElement('div');
+  overlay.id = 'update-overlay';
+  overlay.style.position = 'fixed';
+  overlay.style.top = '0';
+  overlay.style.left = '0';
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  overlay.style.backgroundColor = 'rgba(0,0,0,0.95)';
+  overlay.style.zIndex = '10000';
+  overlay.style.display = 'flex';
+  overlay.style.flexDirection = 'column';
+  overlay.style.justifyContent = 'center';
+  overlay.style.alignItems = 'center';
+  overlay.style.color = 'white';
+  overlay.style.padding = '20px';
+  overlay.style.textAlign = 'center';
+  
+  overlay.innerHTML = `
+    <h2 style="color: #FFC107; margin-bottom: 20px;">Actualizando Aplicación</h2>
+    <div style="width: 80%; max-width: 300px; height: 20px; background: #333; border-radius: 10px; margin: 10px 0;">
+      <div id="update-progress-bar" style="width: 0%; height: 100%; background: #FFC107; border-radius: 10px; transition: width 0.3s;"></div>
+    </div>
+    <p id="update-progress-text" style="margin-top: 10px; color: #aaa;">Preparando actualización...</p>
+  `;
+  
+  document.body.appendChild(overlay);
+
+  // Función para actualizar el progreso
+  function actualizarProgreso(mensaje, porcentaje) {
+    const progressBar = document.getElementById('update-progress-bar');
+    const progressText = document.getElementById('update-progress-text');
+    
+    if (progressBar) progressBar.style.width = `${porcentaje}%`;
+    if (progressText) progressText.textContent = mensaje;
+  }
+
+  // Iniciar proceso de limpieza
+  actualizarProgreso('Eliminando Service Workers...', 20);
+  
+  // Limpiar Service Workers y caches
+  if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(registrations) {
-      for (let reg of registrations) {
-        reg.unregister().then(() => {
-          caches.keys().then(function(names) {
-            for (let name of names) caches.delete(name);
-          });
-          location.reload(true);
+      return Promise.all(registrations.map(reg => {
+        actualizarProgreso(`Eliminando SW: ${reg.scope}`, 30);
+        return reg.unregister();
+      }));
+    }).then(() => {
+      actualizarProgreso('Limpiando cachés...', 50);
+      return caches.keys().then(function(cacheNames) {
+        return Promise.all(cacheNames.map(function(cacheName) {
+          return caches.delete(cacheName);
+        }));
+      });
+    }).then(() => {
+      actualizarProgreso('Limpiando almacenamiento local...', 70);
+      // Limpiar localStorage, sessionStorage y cookies
+      localStorage.clear();
+      sessionStorage.clear();
+      
+      // Limpiar cookies del dominio
+      document.cookie.split(';').forEach(cookie => {
+        const eqPos = cookie.indexOf('=');
+        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+      });
+      
+      actualizarProgreso('Actualizando bases de datos...', 80);
+      
+      // Limpiar IndexedDB si está disponible
+      if (window.indexedDB) {
+        return window.indexedDB.databases().then(dbs => {
+          return Promise.all(dbs.map(db => {
+            return new Promise((resolve, reject) => {
+              const request = window.indexedDB.deleteDatabase(db.name);
+              request.onsuccess = resolve;
+              request.onerror = reject;
+            });
+          }));
         });
       }
+    }).then(() => {
+      actualizarProgreso('¡Actualización completada!', 100);
+      
+      // Recargar la aplicación después de un breve retraso
+      setTimeout(() => {
+        // Forzar recarga desde el servidor (no desde caché)
+        window.location.href = window.location.origin + window.location.pathname + '?nocache=' + Date.now();
+      }, 1500);
+    }).catch(err => {
+      console.error('Error durante la actualización:', err);
+      actualizarProgreso('Error durante la actualización', 100);
+      overlay.innerHTML = `
+        <h2 style="color: #f44336;">Error en la actualización</h2>
+        <p style="color: #ff9800;">${err.message || 'Error desconocido'}</p>
+        <button onclick="window.location.reload(true)" style="
+          padding: 12px 24px;
+          background: #2196F3;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-size: 16px;
+          cursor: pointer;
+          margin-top: 20px;
+        ">
+          Recargar manualmente (Ctrl+F5)
+        </button>
+      `;
     });
   } else {
-    location.reload(true);
+    // Navegador no soporta Service Workers - hacer limpieza básica
+    actualizarProgreso('Limpiando almacenamiento local...', 50);
+    localStorage.clear();
+    sessionStorage.clear();
+    
+    // Limpiar cookies
+    document.cookie.split(';').forEach(cookie => {
+      const eqPos = cookie.indexOf('=');
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+    });
+    
+    actualizarProgreso('¡Actualización completada!', 100);
+    
+    setTimeout(() => {
+      window.location.reload(true);
+    }, 1500);
   }
 }
 </script></div><div id="interfazSecundaria" style="display: none;"><button onclick="mostrarInterfazPrincipal()" style="
