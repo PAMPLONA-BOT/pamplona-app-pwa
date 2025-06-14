@@ -9,6 +9,7 @@ const urlsToCache = [
   './lecturas.json',
   './revisiones.json',
   './icon-192.png',
+  './Logo.png',
   './icon-512.png'
 ];
 
