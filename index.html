@@ -993,9 +993,6 @@ function verificarClave() {
         const anioActual = new Date().getFullYear();
         localStorage.setItem("acceso_autorizado", `${mesActual}-${anioActual}`);
         localStorage.setItem("pamplonaUserName", respuesta.nombre);
-        // *** Limpiar el contador viejo al iniciar sesión ***
-        localStorage.removeItem('pamplonaQueryCount');
-        localStorage.removeItem('pamplonaQueryLimit');
         iniciarFlujoApp();
       } else {
         document.getElementById("mensajeLogin").textContent = "Clave incorrecta.";
@@ -1024,18 +1021,17 @@ function iniciarFlujoApp() {
 let dataUsuarios = [], dataLectura = [], dataRevisiones = [];
 let datosCargados = false;
 
-// --- INICIO: LÓGICA DEL CONTADOR Y VALIDACIÓN MEJORADA ---
+// --- INICIO: LÓGICA DEL CONTADOR Y VALIDACIÓN ---
 const GOOGLE_SCRIPT_VALIDATION_URL = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
 
 let queryCount = 0;
-let queryLimit = 10; 
+let queryLimit = 50; 
 
 function initializeQueryCounter() {
-    if (!localStorage.getItem('pamplonaQueryLimit')) {
-        localStorage.setItem('pamplonaQueryLimit', 10);
-    }
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
-    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit'));
+    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 10;
+    if (queryLimit > 50) queryLimit = 50; 
+    localStorage.setItem('pamplonaQueryLimit', queryLimit);
     updateQueryUI();
 }
 
@@ -1050,7 +1046,7 @@ function updateQueryUI() {
         clienteBtn.disabled = true;
         medidorBtn.disabled = true;
     } else {
-        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining}</strong> de ${queryLimit}`;
+        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining > 50 ? 50 : remaining}</strong> de ${queryLimit > 50 ? 50 : queryLimit}`;
         clienteBtn.disabled = false;
         medidorBtn.disabled = false;
     }
@@ -1079,20 +1075,17 @@ async function validateUser() {
             body: JSON.stringify({
                 userName: storedUserName,
                 validationCode: code
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            })
         });
         if (!response.ok) throw new Error('Error de red al validar.');
         const result = await response.json();
         
         if (result.status === 'OK') {
             queryCount = 0;
-            queryLimit = 60;
+            queryLimit = 10;
             localStorage.setItem('pamplonaQueryCount', queryCount);
             localStorage.setItem('pamplonaQueryLimit', queryLimit);
-            alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 60.`);
+            alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 50.`);
             updateQueryUI();
         } else {
             alert("Código de validación incorrecto o no corresponde a su usuario.");
