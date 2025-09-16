@@ -1082,7 +1082,7 @@ async function validateUser() {
         
         if (result.status === 'OK') {
             queryCount = 0;
-            queryLimit = 10;
+            queryLimit = 50;
             localStorage.setItem('pamplonaQueryCount', queryCount);
             localStorage.setItem('pamplonaQueryLimit', queryLimit);
             alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 50.`);
