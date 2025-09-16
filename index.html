@@ -982,8 +982,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function verificarClave() {
   const clave = document.getElementById("claveUsuario").value.trim();
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
   if (!clave) return document.getElementById("mensajeLogin").textContent = "Ingrese una clave.";
-  fetch(`https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec?clave=${clave}`)
+  fetch(`${scriptUrl}?clave=${clave}`)
     .then(res => res.text())
     .then(respuesta => {
       if (respuesta.trim() === "OK") {
@@ -1014,10 +1015,11 @@ function iniciarFlujoApp() {
 let dataUsuarios = [], dataLectura = [], dataRevisiones = [];
 let datosCargados = false;
 
-// --- INICIO: LÓGICA DEL CONTADOR DE CONSULTAS ---
+// --- INICIO: LÓGICA DEL CONTADOR Y VALIDACIÓN DINÁMICA ---
+const GOOGLE_SCRIPT_VALIDATION_URL = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
+
 let queryCount = 0;
 let queryLimit = 10;
-const validCodes = ["ALEX1090", "HOBER97", "JOSE15"];
 
 function initializeQueryCounter() {
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
@@ -1049,21 +1051,34 @@ function incrementQueryCount() {
     return true;
 }
 
-function validateUser() {
+async function validateUser() {
     const code = prompt("Ingrese su código de validación para renovar consultas:");
-    if (code === null) {
-        return;
-    }
-    if (validCodes.includes(code.trim())) {
-        queryLimit = queryCount + 100;
-        localStorage.setItem('pamplonaQueryLimit', queryLimit);
-        alert(`¡Código válido! Se han agregado 100 consultas más.`);
-        updateQueryUI();
-    } else {
-        alert("Código inválido.");
+    if (!code) return;
+
+    try {
+        const response = await fetch(GOOGLE_SCRIPT_VALIDATION_URL);
+        if (!response.ok) throw new Error('Error al conectar con el servidor de validación.');
+        const result = await response.json();
+        
+        if (result.status === 'success') {
+            const validCodes = result.data.map(c => c.toString().trim().toUpperCase());
+            if (validCodes.includes(code.trim().toUpperCase())) {
+                queryLimit += 100; // Aumenta en 100 el límite actual
+                localStorage.setItem('pamplonaQueryLimit', queryLimit);
+                alert(`¡Código válido! Se han agregado 100 consultas más.`);
+                updateQueryUI();
+            } else {
+                alert("Código inválido.");
+            }
+        } else {
+            throw new Error(result.message || 'Respuesta de validación inesperada.');
+        }
+    } catch (error) {
+        console.error("Error en la validación:", error);
+        alert("No se pudo validar el código. Verifique su conexión o contacte al administrador.");
     }
 }
-// --- FIN: LÓGICA DEL CONTADOR DE CONSULTAS ---
+// --- FIN: LÓGICA DEL CONTADOR Y VALIDACIÓN DINÁMICA ---
 
 async function cargarDatosJSON() {
   if (datosCargados) return alert("Los datos ya fueron cargados.");
