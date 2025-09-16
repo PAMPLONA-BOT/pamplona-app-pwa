@@ -494,7 +494,7 @@ function verificarInstalacion() {
 </div>
 <div id="interfazPrincipal" style="display: block;"><!-- Vista principal --><div class="container" id="inicio">
 <img alt="Logo de la página" class="logo" src="Logo.png"/>
-<h1>REGIONAL PAMPLONA</h1>
+<h1 id="welcomeTitle">REGIONAL PAMPLONA</h1>
 <button class="btn" onclick="mostrarFormulario()">REPORTE DIARIO</button>
 <button class="btn" onclick="mostrarInterfazSecundaria()">VALIDADOR USUARIOS</button>
 <button class="btn" onclick="irAUrl('https://script.google.com/macros/s/AKfycbw2z6rVlBqlPU0drL9Rus_p_ORjVfl8iGQBL-gupoDio4Fq3ElbrqUILguiAtLYWpJZfg/exec', 'revisionEjecutada')">REVISIONES EJECUTADAS</button>
@@ -882,7 +882,6 @@ function actualizarApp() {
         <form onsubmit="event.preventDefault(); buscarDatos();">
             <input id="numeroUsuario" placeholder="Ingrese número de usuario o llave" type="tel"/>
         </form>
-        <!-- INICIO: MODIFICACIÓN -->
         <div class="numero-consultado" id="queryCounter"></div>
         <button id="btnCliente" class="button green" onclick="buscarDatos()" style="display:none;" type="button">Cliente</button>
         <button id="btnMedidor" class="button blue" onclick="buscarDatosConLlave()" style="display:none;" type="button">Medidor</button>
@@ -890,7 +889,6 @@ function actualizarApp() {
         <div id="resultados"></div>
         <button id="btnValidar" class="button" onclick="validateUser()" style="background-color: #ffc107; display:none;" type="button">Validar Usuario</button>
         <button class="btn-clear button" onclick="limpiarConsulta()" style="display:none;">Limpiar Consulta</button>
-        <!-- FIN: MODIFICACIÓN -->
     </div>
 <script>
 // Validación y limpieza OBLIGATORIA de cache al cambiar de mes
@@ -980,17 +978,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// *** FUNCIÓN MODIFICADA ***
 function verificarClave() {
   const clave = document.getElementById("claveUsuario").value.trim();
   const scriptUrl = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
   if (!clave) return document.getElementById("mensajeLogin").textContent = "Ingrese una clave.";
+
   fetch(`${scriptUrl}?clave=${clave}`)
-    .then(res => res.text())
+    .then(res => res.json()) // Esperar una respuesta JSON
     .then(respuesta => {
-      if (respuesta.trim() === "OK") {
+      if (respuesta.status === "OK") {
         const mesActual = new Date().getMonth() + 1;
         const anioActual = new Date().getFullYear();
         localStorage.setItem("acceso_autorizado", `${mesActual}-${anioActual}`);
+        localStorage.setItem("pamplonaUserName", respuesta.nombre); // Guardar el nombre del usuario
         iniciarFlujoApp();
       } else {
         document.getElementById("mensajeLogin").textContent = "Clave incorrecta.";
@@ -999,8 +1000,13 @@ function verificarClave() {
     .catch(() => document.getElementById("mensajeLogin").textContent = "Error al validar. Verifique su conexión.");
 }
 
+// *** FUNCIÓN MODIFICADA ***
 function iniciarFlujoApp() {
   document.getElementById("loginContainer").style.display = "none";
+  const userName = localStorage.getItem("pamplonaUserName");
+  if(userName) {
+      document.getElementById("welcomeTitle").textContent = `Bienvenido, ${userName}`;
+  }
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
   if (isStandalone) {
     document.getElementById("pantallaInicio").style.display = "none";
@@ -1015,15 +1021,15 @@ function iniciarFlujoApp() {
 let dataUsuarios = [], dataLectura = [], dataRevisiones = [];
 let datosCargados = false;
 
-// --- INICIO: LÓGICA DEL CONTADOR Y VALIDACIÓN DINÁMICA ---
-const GOOGLE_SCRIPT_VALIDATION_URL = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
-
+// --- INICIO: LÓGICA DEL CONTADOR Y VALIDACIÓN ---
 let queryCount = 0;
-let queryLimit = 10;
+let queryLimit = 50; // Límite máximo es 50
 
 function initializeQueryCounter() {
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
-    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 10;
+    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 50;
+    if (queryLimit > 50) queryLimit = 50; // Asegurar que el límite nunca sea mayor a 50 al iniciar
+    localStorage.setItem('pamplonaQueryLimit', queryLimit);
     updateQueryUI();
 }
 
@@ -1045,40 +1051,35 @@ function updateQueryUI() {
 }
 
 function incrementQueryCount() {
+    if (queryCount >= queryLimit) return false;
     queryCount++;
     localStorage.setItem('pamplonaQueryCount', queryCount);
     updateQueryUI();
     return true;
 }
 
-async function validateUser() {
+function validateUser() {
     const code = prompt("Ingrese su código de validación para renovar consultas:");
     if (!code) return;
 
-    try {
-        const response = await fetch(GOOGLE_SCRIPT_VALIDATION_URL);
-        if (!response.ok) throw new Error('Error al conectar con el servidor de validación.');
-        const result = await response.json();
-        
-        if (result.status === 'success') {
-            const validCodes = result.data.map(c => c.toString().trim().toUpperCase());
-            if (validCodes.includes(code.trim().toUpperCase())) {
-                queryLimit += 100; // Aumenta en 100 el límite actual
-                localStorage.setItem('pamplonaQueryLimit', queryLimit);
-                alert(`¡Código válido! Se han agregado 100 consultas más.`);
-                updateQueryUI();
-            } else {
-                alert("Código inválido.");
-            }
-        } else {
-            throw new Error(result.message || 'Respuesta de validación inesperada.');
-        }
-    } catch (error) {
-        console.error("Error en la validación:", error);
-        alert("No se pudo validar el código. Verifique su conexión o contacte al administrador.");
+    const storedUserName = localStorage.getItem("pamplonaUserName");
+    if (!storedUserName) {
+        return alert("Error: No se encontró un usuario logueado. Por favor, reinicie la aplicación.");
+    }
+    
+    // La validación es contra el nombre de usuario que inició sesión
+    if (code.trim().toUpperCase() === storedUserName.trim().toUpperCase()) {
+        queryCount = 0; // Se reinicia el conteo
+        queryLimit = 50; // Se renueva el límite a 50
+        localStorage.setItem('pamplonaQueryCount', queryCount);
+        localStorage.setItem('pamplonaQueryLimit', queryLimit);
+        alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 50.`);
+        updateQueryUI();
+    } else {
+        alert("Código de validación incorrecto. Debe coincidir con su nombre de usuario.");
     }
 }
-// --- FIN: LÓGICA DEL CONTADOR Y VALIDACIÓN DINÁMICA ---
+// --- FIN: LÓGICA DEL CONTADOR Y VALIDACIÓN ---
 
 async function cargarDatosJSON() {
   if (datosCargados) return alert("Los datos ya fueron cargados.");
@@ -1106,7 +1107,7 @@ async function cargarDatosJSON() {
       document.getElementById('btnMedidor').style.display = "inline-block";
       document.getElementById('btnValidar').style.display = "inline-block";
       document.querySelector('button[onclick="limpiarConsulta()"]').style.display = "inline-block";
-      initializeQueryCounter(); // Inicializa y muestra el contador de consultas
+      initializeQueryCounter();
   } catch(err) {
       actualizarProgreso("❌ Error al cargar. Revise la conexión.", 0);
       console.error("Error al cargar JSON", err);
@@ -1118,15 +1119,14 @@ function renderCard(title, content) {
 }
 
 function buscarDatos() {
-  if (queryCount >= queryLimit) {
-      alert("Ha alcanzado su límite de consultas. Valide su usuario para obtener más.");
-      return;
-  }
   if (!datosCargados) return alert("Primero cargue los datos.");
   const numero = document.getElementById("numeroUsuario").value.trim();
   if (!numero) return;
 
-  incrementQueryCount();
+  if (!incrementQueryCount()) {
+      alert("Ha alcanzado su límite de consultas. Valide su usuario para obtener más.");
+      return;
+  }
 
   document.getElementById("numeroConsultado").innerHTML = `<strong>CLIENTE:</strong> ${numero}`;
   let html = "";
@@ -1140,15 +1140,14 @@ function buscarDatos() {
 }
 
 function buscarDatosConLlave() {
-  if (queryCount >= queryLimit) {
-      alert("Ha alcanzado su límite de consultas. Valide su usuario para obtener más.");
-      return;
-  }
   if (!datosCargados) return alert("Primero cargue los datos.");
   const llave = document.getElementById("numeroUsuario").value.trim();
   if (!llave) return;
   
-  incrementQueryCount();
+  if (!incrementQueryCount()) {
+      alert("Ha alcanzado su límite de consultas. Valide su usuario para obtener más.");
+      return;
+  }
 
   document.getElementById("numeroConsultado").innerHTML = `<strong>MEDIDOR:</strong> ${llave}`;
   let html = "";
