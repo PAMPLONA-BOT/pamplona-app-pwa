@@ -80,9 +80,14 @@ if ('serviceWorker' in navigator) {
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    .btn:hover {
+    .btn:hover:not(:disabled) {
       background-color: #45a049;
       transform: translateY(-3px);
+    }
+
+    .btn:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
     }
 
     .btn-regresar {
@@ -235,6 +240,11 @@ input[type="tel"] {
 button.button {
     transition: all 0.3s ease;
 }
+button.button:disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+}
+
 </style><style>
 @media (max-width: 768px) {
     input[type="tel"] {
@@ -266,7 +276,7 @@ button.button.green {
     font-size: 18px;
     margin: 10px;
 }
-button.button.green:hover {
+button.button.green:hover:not(:disabled) {
     background-color: #218838;
 }
 button.button.blue {
@@ -278,7 +288,7 @@ button.button.blue {
     font-size: 18px;
     margin: 10px;
 }
-button.button.blue:hover {
+button.button.blue:hover:not(:disabled) {
     background-color: #0056b3;
 }
 button.btn-clear {
@@ -871,12 +881,16 @@ function actualizarApp() {
         <header>Consulta de Datos</header>
         <form onsubmit="event.preventDefault(); buscarDatos();">
             <input id="numeroUsuario" placeholder="Ingrese número de usuario o llave" type="tel"/>
-            <button class="button green" onclick="buscarDatos()" style="display:none;" type="button">Cliente</button>
-            <button class="button blue" onclick="buscarDatosConLlave()" style="display:none;" type="button">Medidor</button>
         </form>
+        <!-- INICIO: MODIFICACIÓN -->
+        <div class="numero-consultado" id="queryCounter"></div>
+        <button id="btnCliente" class="button green" onclick="buscarDatos()" style="display:none;" type="button">Cliente</button>
+        <button id="btnMedidor" class="button blue" onclick="buscarDatosConLlave()" style="display:none;" type="button">Medidor</button>
         <div class="numero-consultado" id="numeroConsultado"></div>
         <div id="resultados"></div>
+        <button id="btnValidar" class="button" onclick="validateUser()" style="background-color: #ffc107; display:none;" type="button">Validar Usuario</button>
         <button class="btn-clear button" onclick="limpiarConsulta()" style="display:none;">Limpiar Consulta</button>
+        <!-- FIN: MODIFICACIÓN -->
     </div>
 <script>
 // Validación y limpieza OBLIGATORIA de cache al cambiar de mes
@@ -1000,6 +1014,57 @@ function iniciarFlujoApp() {
 let dataUsuarios = [], dataLectura = [], dataRevisiones = [];
 let datosCargados = false;
 
+// --- INICIO: LÓGICA DEL CONTADOR DE CONSULTAS ---
+let queryCount = 0;
+let queryLimit = 10;
+const validCodes = ["ALEX1090", "HOBER97", "JOSE15"];
+
+function initializeQueryCounter() {
+    queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
+    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 10;
+    updateQueryUI();
+}
+
+function updateQueryUI() {
+    const remaining = queryLimit - queryCount;
+    const counterElement = document.getElementById('queryCounter');
+    const clienteBtn = document.getElementById('btnCliente');
+    const medidorBtn = document.getElementById('btnMedidor');
+
+    if (remaining <= 0) {
+        counterElement.innerHTML = `<strong style="color: #dc3545;">Límite de consultas alcanzado (0 restantes).</strong>`;
+        clienteBtn.disabled = true;
+        medidorBtn.disabled = true;
+    } else {
+        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining}</strong> de ${queryLimit}`;
+        clienteBtn.disabled = false;
+        medidorBtn.disabled = false;
+    }
+}
+
+function incrementQueryCount() {
+    queryCount++;
+    localStorage.setItem('pamplonaQueryCount', queryCount);
+    updateQueryUI();
+    return true;
+}
+
+function validateUser() {
+    const code = prompt("Ingrese su código de validación para renovar consultas:");
+    if (code === null) {
+        return;
+    }
+    if (validCodes.includes(code.trim())) {
+        queryLimit = queryCount + 100;
+        localStorage.setItem('pamplonaQueryLimit', queryLimit);
+        alert(`¡Código válido! Se han agregado 100 consultas más.`);
+        updateQueryUI();
+    } else {
+        alert("Código inválido.");
+    }
+}
+// --- FIN: LÓGICA DEL CONTADOR DE CONSULTAS ---
+
 async function cargarDatosJSON() {
   if (datosCargados) return alert("Los datos ya fueron cargados.");
   const barraCarga = document.getElementById("barraCarga");
@@ -1022,9 +1087,11 @@ async function cargarDatosJSON() {
       
       actualizarProgreso("✅ ¡Datos cargados!", 100);
       datosCargados = true;
-      document.querySelector('button[onclick="buscarDatos()"]').style.display = "inline-block";
-      document.querySelector('button[onclick="buscarDatosConLlave()"]').style.display = "inline-block";
+      document.getElementById('btnCliente').style.display = "inline-block";
+      document.getElementById('btnMedidor').style.display = "inline-block";
+      document.getElementById('btnValidar').style.display = "inline-block";
       document.querySelector('button[onclick="limpiarConsulta()"]').style.display = "inline-block";
+      initializeQueryCounter(); // Inicializa y muestra el contador de consultas
   } catch(err) {
       actualizarProgreso("❌ Error al cargar. Revise la conexión.", 0);
       console.error("Error al cargar JSON", err);
@@ -1036,8 +1103,16 @@ function renderCard(title, content) {
 }
 
 function buscarDatos() {
+  if (queryCount >= queryLimit) {
+      alert("Ha alcanzado su límite de consultas. Valide su usuario para obtener más.");
+      return;
+  }
   if (!datosCargados) return alert("Primero cargue los datos.");
   const numero = document.getElementById("numeroUsuario").value.trim();
+  if (!numero) return;
+
+  incrementQueryCount();
+
   document.getElementById("numeroConsultado").innerHTML = `<strong>CLIENTE:</strong> ${numero}`;
   let html = "";
   const usuario = dataUsuarios.find(row => row[0] === numero);
@@ -1050,8 +1125,16 @@ function buscarDatos() {
 }
 
 function buscarDatosConLlave() {
+  if (queryCount >= queryLimit) {
+      alert("Ha alcanzado su límite de consultas. Valide su usuario para obtener más.");
+      return;
+  }
   if (!datosCargados) return alert("Primero cargue los datos.");
   const llave = document.getElementById("numeroUsuario").value.trim();
+  if (!llave) return;
+  
+  incrementQueryCount();
+
   document.getElementById("numeroConsultado").innerHTML = `<strong>MEDIDOR:</strong> ${llave}`;
   let html = "";
   const usuario = dataUsuarios.find(row => row[7] === llave);
