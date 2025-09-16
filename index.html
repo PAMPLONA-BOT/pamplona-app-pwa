@@ -1029,7 +1029,7 @@ let queryLimit = 10;
 
 function initializeQueryCounter() {
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
-    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 10;
+    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 50;
     if (queryLimit > 50) queryLimit = 50; 
     localStorage.setItem('pamplonaQueryLimit', queryLimit);
     updateQueryUI();
