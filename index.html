@@ -1021,16 +1021,16 @@ function iniciarFlujoApp() {
 let dataUsuarios = [], dataLectura = [], dataRevisiones = [];
 let datosCargados = false;
 
-// --- INICIO: LÓGICA DEL CONTADOR Y VALIDACIÓN ---
+// --- INICIO: LÓGICA DEL CONTADOR Y VALIDACIÓN MEJORADA ---
 const GOOGLE_SCRIPT_VALIDATION_URL = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
 
 let queryCount = 0;
-let queryLimit = 50; 
+let queryLimit = 10; 
 
 function initializeQueryCounter() {
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
-    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 50;
-    if (queryLimit > 50) queryLimit = 50; 
+    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 10; // Límite inicial de 10
+    if (queryLimit > 50) queryLimit = 50; // Salvaguarda por si el valor guardado es mayor a 50.
     localStorage.setItem('pamplonaQueryLimit', queryLimit);
     updateQueryUI();
 }
@@ -1046,7 +1046,7 @@ function updateQueryUI() {
         clienteBtn.disabled = true;
         medidorBtn.disabled = true;
     } else {
-        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining > 50 ? 50 : remaining}</strong> de ${queryLimit > 50 ? 50 : queryLimit}`;
+        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining}</strong> de ${queryLimit}`;
         clienteBtn.disabled = false;
         medidorBtn.disabled = false;
     }
@@ -1075,7 +1075,10 @@ async function validateUser() {
             body: JSON.stringify({
                 userName: storedUserName,
                 validationCode: code
-            })
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
         });
         if (!response.ok) throw new Error('Error de red al validar.');
         const result = await response.json();
