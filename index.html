@@ -968,7 +968,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const mesActual = new Date().getMonth() + 1;
   const anioActual = new Date().getFullYear();
   const claveGuardada = localStorage.getItem("acceso_autorizado");
-  if (claveGuardada === `${mesActual}-${anioActual}`) {
+  const nombreGuardado = localStorage.getItem("pamplonaUserName");
+
+  if (claveGuardada === `${mesActual}-${anioActual}` && nombreGuardado) {
     iniciarFlujoApp();
   } else {
     document.getElementById("loginContainer").style.display = "block";
@@ -978,20 +980,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// *** FUNCIÓN MODIFICADA ***
 function verificarClave() {
   const clave = document.getElementById("claveUsuario").value.trim();
   const scriptUrl = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
   if (!clave) return document.getElementById("mensajeLogin").textContent = "Ingrese una clave.";
-
+  
   fetch(`${scriptUrl}?clave=${clave}`)
-    .then(res => res.json()) // Esperar una respuesta JSON
+    .then(res => res.json())
     .then(respuesta => {
-      if (respuesta.status === "OK") {
+      if (respuesta.status === "OK" && respuesta.nombre) {
         const mesActual = new Date().getMonth() + 1;
         const anioActual = new Date().getFullYear();
         localStorage.setItem("acceso_autorizado", `${mesActual}-${anioActual}`);
-        localStorage.setItem("pamplonaUserName", respuesta.nombre); // Guardar el nombre del usuario
+        localStorage.setItem("pamplonaUserName", respuesta.nombre);
         iniciarFlujoApp();
       } else {
         document.getElementById("mensajeLogin").textContent = "Clave incorrecta.";
@@ -1000,7 +1001,6 @@ function verificarClave() {
     .catch(() => document.getElementById("mensajeLogin").textContent = "Error al validar. Verifique su conexión.");
 }
 
-// *** FUNCIÓN MODIFICADA ***
 function iniciarFlujoApp() {
   document.getElementById("loginContainer").style.display = "none";
   const userName = localStorage.getItem("pamplonaUserName");
@@ -1022,13 +1022,15 @@ let dataUsuarios = [], dataLectura = [], dataRevisiones = [];
 let datosCargados = false;
 
 // --- INICIO: LÓGICA DEL CONTADOR Y VALIDACIÓN ---
+const GOOGLE_SCRIPT_VALIDATION_URL = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
+
 let queryCount = 0;
-let queryLimit = 50; // Límite máximo es 50
+let queryLimit = 50; 
 
 function initializeQueryCounter() {
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
     queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 50;
-    if (queryLimit > 50) queryLimit = 50; // Asegurar que el límite nunca sea mayor a 50 al iniciar
+    if (queryLimit > 50) queryLimit = 50; 
     localStorage.setItem('pamplonaQueryLimit', queryLimit);
     updateQueryUI();
 }
@@ -1044,7 +1046,7 @@ function updateQueryUI() {
         clienteBtn.disabled = true;
         medidorBtn.disabled = true;
     } else {
-        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining}</strong> de ${queryLimit}`;
+        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining > 50 ? 50 : remaining}</strong> de ${queryLimit > 50 ? 50 : queryLimit}`;
         clienteBtn.disabled = false;
         medidorBtn.disabled = false;
     }
@@ -1058,7 +1060,7 @@ function incrementQueryCount() {
     return true;
 }
 
-function validateUser() {
+async function validateUser() {
     const code = prompt("Ingrese su código de validación para renovar consultas:");
     if (!code) return;
 
@@ -1067,16 +1069,30 @@ function validateUser() {
         return alert("Error: No se encontró un usuario logueado. Por favor, reinicie la aplicación.");
     }
     
-    // La validación es contra el nombre de usuario que inició sesión
-    if (code.trim().toUpperCase() === storedUserName.trim().toUpperCase()) {
-        queryCount = 0; // Se reinicia el conteo
-        queryLimit = 50; // Se renueva el límite a 50
-        localStorage.setItem('pamplonaQueryCount', queryCount);
-        localStorage.setItem('pamplonaQueryLimit', queryLimit);
-        alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 50.`);
-        updateQueryUI();
-    } else {
-        alert("Código de validación incorrecto. Debe coincidir con su nombre de usuario.");
+    try {
+        const response = await fetch(GOOGLE_SCRIPT_VALIDATION_URL, {
+            method: 'POST',
+            body: JSON.stringify({
+                userName: storedUserName,
+                validationCode: code
+            })
+        });
+        if (!response.ok) throw new Error('Error de red al validar.');
+        const result = await response.json();
+        
+        if (result.status === 'OK') {
+            queryCount = 0;
+            queryLimit = 50;
+            localStorage.setItem('pamplonaQueryCount', queryCount);
+            localStorage.setItem('pamplonaQueryLimit', queryLimit);
+            alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 50.`);
+            updateQueryUI();
+        } else {
+            alert("Código de validación incorrecto o no corresponde a su usuario.");
+        }
+    } catch (error) {
+        console.error("Error en la validación:", error);
+        alert("No se pudo validar el código. Verifique su conexión o contacte al administrador.");
     }
 }
 // --- FIN: LÓGICA DEL CONTADOR Y VALIDACIÓN ---
