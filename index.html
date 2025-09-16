@@ -993,6 +993,9 @@ function verificarClave() {
         const anioActual = new Date().getFullYear();
         localStorage.setItem("acceso_autorizado", `${mesActual}-${anioActual}`);
         localStorage.setItem("pamplonaUserName", respuesta.nombre);
+        // *** Limpiar el contador viejo al iniciar sesión ***
+        localStorage.removeItem('pamplonaQueryCount');
+        localStorage.removeItem('pamplonaQueryLimit');
         iniciarFlujoApp();
       } else {
         document.getElementById("mensajeLogin").textContent = "Clave incorrecta.";
@@ -1028,10 +1031,11 @@ let queryCount = 0;
 let queryLimit = 10; 
 
 function initializeQueryCounter() {
+    if (!localStorage.getItem('pamplonaQueryLimit')) {
+        localStorage.setItem('pamplonaQueryLimit', 10);
+    }
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
-    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 10; // Límite inicial de 10
-    if (queryLimit > 50) queryLimit = 50; // Salvaguarda por si el valor guardado es mayor a 50.
-    localStorage.setItem('pamplonaQueryLimit', queryLimit);
+    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit'));
     updateQueryUI();
 }
 
@@ -1085,10 +1089,10 @@ async function validateUser() {
         
         if (result.status === 'OK') {
             queryCount = 0;
-            queryLimit = 50;
+            queryLimit = 60;
             localStorage.setItem('pamplonaQueryCount', queryCount);
             localStorage.setItem('pamplonaQueryLimit', queryLimit);
-            alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 50.`);
+            alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 60.`);
             updateQueryUI();
         } else {
             alert("Código de validación incorrecto o no corresponde a su usuario.");
