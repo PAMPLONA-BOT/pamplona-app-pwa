@@ -501,7 +501,7 @@ function verificarInstalacion() {
 <button class="btn" onclick="irAUrl('https://script.google.com/macros/s/AKfycbyWqjGdR0kdTvBTiYMDZ0o14nSVOA8opZum-2goxP0gr9oztae9YTPGvxrx4c-ol7Es/exec', 'PENDIENTE DESCARGA')">PENDIENTES DESCARGAR</button>
 <button class="btn" onclick="irAUrl('https://script.google.com/macros/s/AKfycbw-YQTef8VFk4KPc7S8iPnmMXxzaXLegyH8tLk-TqxNwROMi-mRqiUh8LwhQ2J1RbXFAA/exec', 'pendienteDescargas')">CONSULTA DE RUTA Y KML</button>
 <button class="btn" onclick="irAUrl('https://pamplona-bot.github.io/PAMPLONA_ENRUTES/', 'enrutes')">ENRUTES</button>
-</div><! Vista de formulario><div class="container hidden" id="vistaReporte">
+</div><!-- Vista de formulario --><div class="container hidden" id="vistaReporte">
 <h2>Reporte Diario</h2>
 <div class="form-group">
 <label for="operario">Operario:</label>
@@ -993,6 +993,10 @@ function verificarClave() {
         const anioActual = new Date().getFullYear();
         localStorage.setItem("acceso_autorizado", `${mesActual}-${anioActual}`);
         localStorage.setItem("pamplonaUserName", respuesta.nombre);
+        // *** Limpiar el contador y estado premium al iniciar sesión ***
+        localStorage.removeItem('pamplonaQueryCount');
+        localStorage.removeItem('pamplonaQueryLimit');
+        localStorage.removeItem('pamplonaPremiumStatus');
         iniciarFlujoApp();
       } else {
         document.getElementById("mensajeLogin").textContent = "Clave incorrecta.";
@@ -1028,10 +1032,11 @@ let queryCount = 0;
 let queryLimit = 10; 
 
 function initializeQueryCounter() {
+    if (!localStorage.getItem('pamplonaQueryLimit')) {
+        localStorage.setItem('pamplonaQueryLimit', 10);
+    }
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
-    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 10;
-    if (queryLimit > 50) queryLimit = 50; 
-    localStorage.setItem('pamplonaQueryLimit', queryLimit);
+    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit'));
     updateQueryUI();
 }
 
@@ -1046,7 +1051,7 @@ function updateQueryUI() {
         clienteBtn.disabled = true;
         medidorBtn.disabled = true;
     } else {
-        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining > 50 ? 50 : remaining}</strong> de ${queryLimit > 50 ? 50 : queryLimit}`;
+        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining}</strong> de ${queryLimit}`;
         clienteBtn.disabled = false;
         medidorBtn.disabled = false;
     }
@@ -1073,6 +1078,7 @@ async function validateUser() {
         const response = await fetch(GOOGLE_SCRIPT_VALIDATION_URL, {
             method: 'POST',
             body: JSON.stringify({
+                action: 'validateRenewal',
                 userName: storedUserName,
                 validationCode: code
             })
@@ -1082,10 +1088,12 @@ async function validateUser() {
         
         if (result.status === 'OK') {
             queryCount = 0;
-            queryLimit = 50;
+            queryLimit = 60;
             localStorage.setItem('pamplonaQueryCount', queryCount);
             localStorage.setItem('pamplonaQueryLimit', queryLimit);
-            alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 50.`);
+            // Al validar, también se le da status premium para la siguiente carga de datos
+            localStorage.setItem('pamplonaPremiumStatus', 'true');
+            alert(`¡Validación exitosa! Su límite se ha renovado a 60 consultas y tiene acceso a todos los datos.`);
             updateQueryUI();
         } else {
             alert("Código de validación incorrecto o no corresponde a su usuario.");
@@ -1098,36 +1106,66 @@ async function validateUser() {
 // --- FIN: LÓGICA DEL CONTADOR Y VALIDACIÓN ---
 
 async function cargarDatosJSON() {
-  if (datosCargados) return alert("Los datos ya fueron cargados.");
-  const barraCarga = document.getElementById("barraCarga");
-  const progresoCarga = document.getElementById("progresoCarga");
-  const estadoCarga = document.getElementById("estadoCarga");
-  barraCarga.style.display = "block";
-  
-  const actualizarProgreso = (texto, valor) => {
-      estadoCarga.textContent = texto;
-      progresoCarga.value = valor;
-  };
-  
-  try {
-      actualizarProgreso("📂 Cargando usuarios...", 20);
-      dataUsuarios = await (await fetch("https://pamplona-bot.github.io/pamplona-app-pwa/usuarios.json")).json();
-      actualizarProgreso("📘 Cargando lecturas...", 50);
-      dataLectura = await (await fetch("https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json")).json();
-      actualizarProgreso("📙 Cargando revisiones...", 80);
-      dataRevisiones = await (await fetch("https://pamplona-bot.github.io/pamplona-app-pwa/revisiones.json")).json();
-      
-      actualizarProgreso("✅ ¡Datos cargados!", 100);
-      datosCargados = true;
-      document.getElementById('btnCliente').style.display = "inline-block";
-      document.getElementById('btnMedidor').style.display = "inline-block";
-      document.getElementById('btnValidar').style.display = "inline-block";
-      document.querySelector('button[onclick="limpiarConsulta()"]').style.display = "inline-block";
-      initializeQueryCounter();
-  } catch(err) {
-      actualizarProgreso("❌ Error al cargar. Revise la conexión.", 0);
-      console.error("Error al cargar JSON", err);
-  }
+    if (datosCargados) {
+        alert("Los datos ya fueron cargados en esta sesión.");
+        return;
+    }
+    const barraCarga = document.getElementById("barraCarga");
+    const progresoCarga = document.getElementById("progresoCarga");
+    const estadoCarga = document.getElementById("estadoCarga");
+    barraCarga.style.display = "block";
+
+    const actualizarProgreso = (texto, valor) => {
+        estadoCarga.textContent = texto;
+        progresoCarga.value = valor;
+    };
+    
+    const storedUserName = localStorage.getItem("pamplonaUserName");
+    if (!storedUserName) return alert("Error de sesión. Por favor reinicie la app.");
+    
+    try {
+        let isPremium = localStorage.getItem('pamplonaPremiumStatus');
+
+        if (isPremium === null) {
+            actualizarProgreso("Verificando permisos...", 10);
+            const response = await fetch(GOOGLE_SCRIPT_VALIDATION_URL, {
+                method: 'POST',
+                body: JSON.stringify({ action: 'checkPremium', userName: storedUserName })
+            });
+            const result = await response.json();
+            isPremium = (result.status === 'OK').toString();
+            localStorage.setItem('pamplonaPremiumStatus', isPremium);
+        }
+
+        const filesToFetch = [{ url: 'https://pamplona-bot.github.io/pamplona-app-pwa/usuarios.json', name: 'usuarios' }];
+        
+        if (isPremium === 'true') {
+            actualizarProgreso("Cargando datos completos (premium)...", 20);
+            filesToFetch.push({ url: 'https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json', name: 'lecturas' });
+            filesToFetch.push({ url: 'https://pamplona-bot.github.io/pamplona-app-pwa/revisiones.json', name: 'revisiones' });
+        } else {
+            actualizarProgreso("Cargando datos básicos...", 20);
+        }
+        
+        const responses = await Promise.all(filesToFetch.map(f => fetch(f.url)));
+        const jsonData = await Promise.all(responses.map(res => res.json()));
+
+        dataUsuarios = jsonData[0] || [];
+        dataLectura = (isPremium === 'true' && jsonData[1]) ? jsonData[1] : [];
+        dataRevisiones = (isPremium === 'true' && jsonData[2]) ? jsonData[2] : [];
+
+        actualizarProgreso("✅ ¡Datos cargados!", 100);
+        datosCargados = true;
+        document.getElementById('btnCliente').style.display = "inline-block";
+        document.getElementById('btnMedidor').style.display = "inline-block";
+        document.getElementById('btnValidar').style.display = "inline-block";
+        document.querySelector('button[onclick="limpiarConsulta()"]').style.display = "inline-block";
+        initializeQueryCounter();
+
+    } catch (err) {
+        actualizarProgreso("❌ Error al cargar. Revise la conexión.", 0);
+        console.error("Error al cargar JSON", err);
+    }
 }
 
 function renderCard(title, content) {
@@ -1150,8 +1188,14 @@ function buscarDatos() {
   const lectura = dataLectura.find(row => row[0] === numero);
   const revision = dataRevisiones.find(row => row[0] === numero);
   if (usuario) html += renderCard("Información del Usuario", `<p><strong>Ciclo:</strong> ${usuario[1]}</p><p><strong>Medidor:</strong> ${usuario[2]}</p><p><strong>Nombre:</strong> ${usuario[3]}</p><p><strong>Dirección:</strong> ${usuario[4]}</p><p><strong>Teléfono:</strong> ${usuario[5]}</p><p><strong>GPS:</strong> <a href="${usuario[6]}" target="_blank">Ver mapa</a></p>`);
-  if (lectura) html += renderCard("Lecturas", `<p><strong>Dato 1:</strong> ${lectura[1]}</p><p><strong>Dato 2:</strong> ${lectura[2]}</p><p><strong>Dato 3:</strong> ${lectura[3]}</p>`);
-  if (revision) html += renderCard("Revisiones", `<pre>${revision[1]}</pre>`);
+  
+  if (dataLectura.length > 0 && lectura) {
+      html += renderCard("Lecturas", `<p><strong>Dato 1:</strong> ${lectura[1]}</p><p><strong>Dato 2:</strong> ${lectura[2]}</p><p><strong>Dato 3:</strong> ${lectura[3]}</p>`);
+  }
+  if (dataRevisiones.length > 0 && revision) {
+      html += renderCard("Revisiones", `<pre>${revision[1]}</pre>`);
+  }
+  
   document.getElementById("resultados").innerHTML = html || renderCard("Sin resultados", "<p>No se encontró información para el número ingresado.</p>");
 }
 
@@ -1172,8 +1216,13 @@ function buscarDatosConLlave() {
       const lectura = dataLectura.find(row => row[0] === usuario[0]);
       const revision = dataRevisiones.find(rev => rev[0] === usuario[0]);
       html += renderCard("Información del Usuario", `<p><strong>Cliente:</strong> ${usuario[0]}</p><p><strong>Ciclo:</strong> ${usuario[1]}</p><p><strong>Medidor:</strong> ${usuario[2]}</p><p><strong>Nombre:</strong> ${usuario[3]}</p><p><strong>Dirección:</strong> ${usuario[4]}</p><p><strong>Teléfono:</strong> ${usuario[5]}</p><p><strong>GPS:</strong> <a href="${usuario[6]}" target="_blank">Ver mapa</a></p>`);
-      if (lectura) html += renderCard("Lecturas", `<p><strong>Dato 1:</strong> ${lectura[1]}</p><p><strong>Dato 2:</strong> ${lectura[2]}</p><p><strong>Dato 3:</strong> ${lectura[3]}</p>`);
-      if (revision) html += renderCard("Revisiones SCR", `<pre>${revision[1]}</pre>`);
+      
+      if (dataLectura.length > 0 && lectura) {
+          html += renderCard("Lecturas", `<p><strong>Dato 1:</strong> ${lectura[1]}</p><p><strong>Dato 2:</strong> ${lectura[2]}</p><p><strong>Dato 3:</strong> ${lectura[3]}</p>`);
+      }
+      if (dataRevisiones.length > 0 && revision) {
+          html += renderCard("Revisiones SCR", `<pre>${revision[1]}</pre>`);
+      }
   }
   document.getElementById("resultados").innerHTML = html || renderCard("Sin resultados", "<p>No se encontró información para el medidor ingresado.</p>");
 }
