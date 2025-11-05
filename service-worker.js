@@ -1,12 +1,16 @@
 
-const CACHE_NAME = 'validador-cache-v4';
+const CACHE_NAME = 'validador-cache-v6';
 const urlsToCache = [
   './',
   './index.html',
   './manifest.json',
   './service-worker.js',
   './usuarios.json',
+  './operarios.json',
   './lecturas.json',
+  './ciclos.json',
+  './Logotipo.png',
+  './discordancias.json',
   './revisiones.json',
   './icon-192.png',
   './Logo.png',
