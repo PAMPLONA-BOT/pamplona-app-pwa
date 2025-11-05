@@ -1,6 +1,6 @@
 {
-  "name": "Aplicación de Navegación Regional Pamplona",
-  "short_name": "NavApp",
+  "name": "Regional Pamplona",
+  "short_name": "PAMPLONA",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
