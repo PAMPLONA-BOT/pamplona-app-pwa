@@ -1030,7 +1030,7 @@ let queryLimit = 100;
 function initializeQueryCounter() {
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
     queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 100;
-    if (queryLimit > 50) queryLimit = 50; 
+    if (queryLimit > 150) queryLimit = 150; 
     localStorage.setItem('pamplonaQueryLimit', queryLimit);
     updateQueryUI();
 }
