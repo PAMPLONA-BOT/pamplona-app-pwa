@@ -1025,11 +1025,11 @@ let datosCargados = false;
 const GOOGLE_SCRIPT_VALIDATION_URL = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
 
 let queryCount = 0;
-let queryLimit = 10; 
+let queryLimit = 100; 
 
 function initializeQueryCounter() {
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
-    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 10;
+    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 100;
     if (queryLimit > 50) queryLimit = 50; 
     localStorage.setItem('pamplonaQueryLimit', queryLimit);
     updateQueryUI();
