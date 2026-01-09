@@ -1025,13 +1025,14 @@ let datosCargados = false;
 const GOOGLE_SCRIPT_VALIDATION_URL = 'https://script.google.com/macros/s/AKfycbxI762q67BzAK-IkJS3Nh8y6qrSCu7YfxPMEvngmO0H8y0sUx89Rj2hjCOe4P22VeNwSA/exec';
 
 let queryCount = 0;
-let queryLimit = 100; 
+let queryLimit = 10; 
 
 function initializeQueryCounter() {
+    if (!localStorage.getItem('pamplonaQueryLimit')) {
+        localStorage.setItem('pamplonaQueryLimit', 10);
+    }
     queryCount = parseInt(localStorage.getItem('pamplonaQueryCount')) || 0;
-    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit')) || 100;
-    if (queryLimit > 150) queryLimit = 150; 
-    localStorage.setItem('pamplonaQueryLimit', queryLimit);
+    queryLimit = parseInt(localStorage.getItem('pamplonaQueryLimit'));
     updateQueryUI();
 }
 
@@ -1046,7 +1047,7 @@ function updateQueryUI() {
         clienteBtn.disabled = true;
         medidorBtn.disabled = true;
     } else {
-        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining > 50 ? 50 : remaining}</strong> de ${queryLimit > 50 ? 50 : queryLimit}`;
+        counterElement.innerHTML = `Consultas restantes: <strong style="color: #00796b;">${remaining}</strong> de ${queryLimit}`;
         clienteBtn.disabled = false;
         medidorBtn.disabled = false;
     }
@@ -1073,6 +1074,7 @@ async function validateUser() {
         const response = await fetch(GOOGLE_SCRIPT_VALIDATION_URL, {
             method: 'POST',
             body: JSON.stringify({
+                action: 'validateRenewal',
                 userName: storedUserName,
                 validationCode: code
             })
@@ -1082,10 +1084,12 @@ async function validateUser() {
         
         if (result.status === 'OK') {
             queryCount = 0;
-            queryLimit = 50;
+            queryLimit = 60;
             localStorage.setItem('pamplonaQueryCount', queryCount);
             localStorage.setItem('pamplonaQueryLimit', queryLimit);
-            alert(`¡Validación exitosa! Su límite de consultas ha sido renovado a 50.`);
+            // Al validar, también se le da status premium para la siguiente carga de datos
+            localStorage.setItem('pamplonaPremiumStatus', 'true');
+            alert(`¡Validación exitosa! Su límite se ha renovado a 60 consultas y tiene acceso a todos los datos.`);
             updateQueryUI();
         } else {
             alert("Código de validación incorrecto o no corresponde a su usuario.");
@@ -1098,38 +1102,67 @@ async function validateUser() {
 // --- FIN: LÓGICA DEL CONTADOR Y VALIDACIÓN ---
 
 async function cargarDatosJSON() {
-  if (datosCargados) return alert("Los datos ya fueron cargados.");
-  const barraCarga = document.getElementById("barraCarga");
-  const progresoCarga = document.getElementById("progresoCarga");
-  const estadoCarga = document.getElementById("estadoCarga");
-  barraCarga.style.display = "block";
-  
-  const actualizarProgreso = (texto, valor) => {
-      estadoCarga.textContent = texto;
-      progresoCarga.value = valor;
-  };
-  
-  try {
-      actualizarProgreso("📂 Cargando usuarios...", 20);
-      dataUsuarios = await (await fetch("https://pamplona-bot.github.io/pamplona-app-pwa/usuarios.json")).json();
-      actualizarProgreso("📘 Cargando lecturas...", 50);
-      dataLectura = await (await fetch("https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json")).json();
-      actualizarProgreso("📙 Cargando revisiones...", 80);
-      dataRevisiones = await (await fetch("https://pamplona-bot.github.io/pamplona-app-pwa/revisiones.json")).json();
-      
-      actualizarProgreso("✅ ¡Datos cargados!", 100);
-      datosCargados = true;
-      document.getElementById('btnCliente').style.display = "inline-block";
-      document.getElementById('btnMedidor').style.display = "inline-block";
-      document.getElementById('btnValidar').style.display = "inline-block";
-      document.querySelector('button[onclick="limpiarConsulta()"]').style.display = "inline-block";
-      initializeQueryCounter();
-  } catch(err) {
-      actualizarProgreso("❌ Error al cargar. Revise la conexión.", 0);
-      console.error("Error al cargar JSON", err);
-  }
-}
+    if (datosCargados) {
+        alert("Los datos ya fueron cargados en esta sesión.");
+        return;
+    }
+    const barraCarga = document.getElementById("barraCarga");
+    const progresoCarga = document.getElementById("progresoCarga");
+    const estadoCarga = document.getElementById("estadoCarga");
+    barraCarga.style.display = "block";
 
+    const actualizarProgreso = (texto, valor) => {
+        estadoCarga.textContent = texto;
+        progresoCarga.value = valor;
+    };
+    
+    const storedUserName = localStorage.getItem("pamplonaUserName");
+    if (!storedUserName) return alert("Error de sesión. Por favor reinicie la app.");
+    
+    try {
+        let isPremium = localStorage.getItem('pamplonaPremiumStatus');
+
+        if (isPremium === null) {
+            actualizarProgreso("Verificando permisos...", 10);
+            const response = await fetch(GOOGLE_SCRIPT_VALIDATION_URL, {
+                method: 'POST',
+                body: JSON.stringify({ action: 'checkPremium', userName: storedUserName })
+            });
+            const result = await response.json();
+            isPremium = (result.status === 'OK').toString();
+            localStorage.setItem('pamplonaPremiumStatus', isPremium);
+        }
+
+        const filesToFetch = [{ url: 'https://pamplona-bot.github.io/pamplona-app-pwa/usuarios.json', name: 'usuarios' }];
+        
+        if (isPremium === 'true') {
+            actualizarProgreso("Cargando datos completos (premium)...", 20);
+            filesToFetch.push({ url: 'https://pamplona-bot.github.io/pamplona-app-pwa/lecturas.json', name: 'lecturas' });
+            filesToFetch.push({ url: 'https://pamplona-bot.github.io/pamplona-app-pwa/revisiones.json', name: 'revisiones' });
+        } else {
+            actualizarProgreso("Cargando datos básicos...", 20);
+        }
+        
+        const responses = await Promise.all(filesToFetch.map(f => fetch(f.url)));
+        const jsonData = await Promise.all(responses.map(res => res.json()));
+
+        dataUsuarios = jsonData[0] || [];
+        dataLectura = (isPremium === 'true' && jsonData[1]) ? jsonData[1] : [];
+        dataRevisiones = (isPremium === 'true' && jsonData[2]) ? jsonData[2] : [];
+
+        actualizarProgreso("✅ ¡Datos cargados!", 100);
+        datosCargados = true;
+        document.getElementById('btnCliente').style.display = "inline-block";
+        document.getElementById('btnMedidor').style.display = "inline-block";
+        document.getElementById('btnValidar').style.display = "inline-block";
+        document.querySelector('button[onclick="limpiarConsulta()"]').style.display = "inline-block";
+        initializeQueryCounter();
+
+    } catch (err) {
+        actualizarProgreso("❌ Error al cargar. Revise la conexión.", 0);
+        console.error("Error al cargar JSON", err);
+    }
+}
 function renderCard(title, content) {
     return `<div class="card"><h3>${title}</h3>${content}</div>`;
 }
