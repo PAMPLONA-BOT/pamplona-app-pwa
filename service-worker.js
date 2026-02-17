@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'validador-cache-v8';
+const CACHE_NAME = 'validador-cache-v9';
 const urlsToCache = [
   './',
   './index.html',
